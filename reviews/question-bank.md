@@ -1,14 +1,14 @@
 # 间隔复习题库
 
 ```yaml
-last_updated: 2026-08-12
+last_updated: 2026-09-09
 schedule: ../REVIEW.md
 question_mode: one_at_a_time
 ```
 
 ## 字段说明
 
-- `status`：`active` 表示进入复习队列；`parked` 表示完整主题尚未系统学习，只记录断点。已讲过的最小边界可单独设为 `active`，不等于完整主题已经启用或掌握。
+- `status`：`active` 表示进入复习队列；`parked` 表示完整主题尚未系统学习，只记录断点；`suspended` 表示原已启用卡因当前学习范围调整暂停调度，保留历史记录。只将 `active` 卡纳入到期筛选；这些状态不是掌握层级，暂停不表示已完成或已通过。
 - `interval_step`：`0` 表示尚未首次通过；通过后依次使用 1、3、7、14、30、60、120 天。
 - `next_review`：下一次最早应复习的日期；`—` 表示尚未启用。
 - `last_result`：只使用 `not_reviewed`、`passed`、`partial`、`failed`。
@@ -19,13 +19,21 @@ question_mode: one_at_a_time
 | ID | 主题 | 来源 | 状态 | interval_step | last_reviewed | next_review | last_result |
 | --- | --- | --- | --- | ---: | --- | --- | --- |
 | RV-D1-001 | 返回流程的时间顺序 | Day 1 巩固易混点 | active | 0 | — | 2026-08-13 | not_reviewed |
-| RV-D1-002 | C++17 保证复制消除与 NRVO | Day 1 巩固易混点 | active | 0 | — | 2026-08-13 | not_reviewed |
+| RV-D1-002 | C++17 保证复制消除与 NRVO | Day 1 巩固易混点 | suspended | 0 | — | 2026-08-13 | not_reviewed |
 | RV-D1-003 | 按值返回与悬空观察者 | Day 1 核心证据 | active | 0 | — | 2026-08-14 | not_reviewed |
-| RV-D1-004 | C++11/14 未消除时的移动次数 | Day 1 巩固版本语境 | active | 0 | — | 2026-08-14 | not_reviewed |
-| RV-D1-005 | 六个特殊成员函数 | 新暴露的易漏项 | active | 0 | — | 2026-08-15 | not_reviewed |
+| RV-D1-004 | C++11/14 未消除时的移动次数 | Day 1 巩固版本语境 | suspended | 0 | — | 2026-08-14 | not_reviewed |
+| RV-D1-005 | 六个特殊成员函数 | 新暴露的易漏项 | suspended | 0 | — | 2026-08-15 | not_reviewed |
 | RV-D1-006 | Lambda 引用捕获的生命周期 | Day 1 迁移证据 | active | 0 | — | 2026-08-15 | not_reviewed |
-| GAP-CPP-001 | 完整移动语义 | 用户明确要求完整学习 | parked | 0 | — | — | not_reviewed |
-| GAP-CPP-002 | Lambda 闭包与 `std::function` | Day 1 暴露的断点 | parked | 0 | — | — | not_reviewed |
+| GAP-CPP-001 | 完整移动语义 | 旧专项学习要求，现按需候选 | parked | 0 | — | — | not_reviewed |
+| GAP-CPP-002 | Lambda 闭包与 `std::function` | Day 1 断点，现按需候选 | parked | 0 | — | — | not_reviewed |
+
+## 2026-09-09 调度范围调整
+
+用户将当前路线固定为专业基础回顾，取消 C++ 标准与专项必学要求。因此 RV-D1-002、RV-D1-004、RV-D1-005 暂停，RV-D1-001、RV-D1-003、RV-D1-006 保留为通用生命周期基础复习。原 6 张到期卡中 3 张暂停，截至本日仍有 3 张 `active` 卡到期。
+
+这次调整只改变调度范围，未提问或作答；全部卡片的 `next_review`、`last_reviewed`、`interval_step` 和 `last_result` 保持原值。暂停不是作答结果或完成证据，恢复时按实际会话日期与学习需要重新检查，不因经过时间自动推进间隔。
+
+两个 `GAP-CPP` 主题是保留的旧专项候选，没有新增掌握结论。后续只有明确启用专项或基础练习确有需求时才选取相关内容，不能继续作为专业基础路线的整套前置要求。
 
 ## RV-D1-001：返回流程的时间顺序
 
@@ -146,9 +154,9 @@ std::function<std::string()> make_reader()
 
 **启用条件**
 
-进入复制/移动语义学习单元后拆分为多张题卡。
+后续明确启用移动语义专项，或基础练习确有相关需求时，按实际学过的内容拆分题卡；当前不要求进入完整专项。
 
-**必须完整覆盖**
+**旧专项候选范围（按需选择，不要求全部完成）**
 
 - 左值、右值、值类别与 `T&&`；
 - 移动构造和移动赋值的语义；
@@ -166,9 +174,9 @@ std::function<std::string()> make_reader()
 
 **启用条件**
 
-进入 Lambda 系统学习单元后拆分为多张题卡。
+后续明确启用 Lambda 专项，或基础练习确有相关需求时，按实际学过的内容拆分题卡；当前不要求进入完整专项。
 
-**必须覆盖**
+**旧专项候选范围（按需选择，不要求全部完成）**
 
 - Lambda 表达式产生闭包类型和闭包对象；
 - `auto`、`decltype` 与不可直接拼写的闭包类型；
