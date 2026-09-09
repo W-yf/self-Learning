@@ -3,7 +3,7 @@
 本文件同时承担进度、能力起点、近期任务和跨环境交接。计划范围见 [LEARNING_PLAN](LEARNING_PLAN.md)。
 
 ```yaml
-last_updated: 2026-09-09
+last_updated: 2026-09-10
 current_day: 2
 completed_learning_days: 1
 current_stage: goal_and_route_rebaseline
@@ -20,17 +20,19 @@ weekly_review_buffer_hours_proposed: 1
 weekly_budget_confirmed: false
 total_route_budget: to_be_reestimated
 document_structure: simplified
-sync_status: local_uncommitted
-remote_verified_at: 2026-09-09
+sync_status: published
+repository_name: self-Learning
+repository_url: https://github.com/W-yf/self-Learning
+remote_verified_at: 2026-09-10
 remote_verified_branch: main
-remote_verified_commit: c463696e6c9db21dba4a8a514e7ed9b2a8b0c246
+published_learning_commit: 88d50a983a0bde324581a9f2b85e6580c329ebab
 ```
 
 ## 已有成果与起点
 
 - 初始化、旧 Stage 1–3 已完成并经用户确认，详见 [历史日志](logs/2026-08-12.md)。
 - Day 1 于 2026-08-12 完成并确认巩固：安全路径通过 MSVC 编译、运行退出码为 0；新字符串 Lambda 场景的独立迁移解释通过。保留 [笔记](notes/day-01-lifetime.md) 和 [练习](exercises/day-01-lifetime/README.md)。
-- Day 2 和新 R0 未开始。本次只调整文档，没有新学习、诊断或复习作答。
+- Day 2 和新 R0 未开始。本次发布与仓库维护没有增加学习日、诊断或复习作答。
 
 | 范围 | 当前证据 |
 |---|---|
@@ -62,4 +64,6 @@ remote_verified_commit: c463696e6c9db21dba4a8a514e7ed9b2a8b0c246
 
 ## 同步说明
 
-本轮在既有未提交修改上恢复原稿的明确实验与验收，并提高 CSAPP/OS 优先级；保持精简后的文件结构。远程 main 仍是上述提交，新路线和本次重构只在本地；未暂存、提交或推送。其他环境以已推送提交为准，同步后再据新文件继续。重构记录见 [本日日志](logs/2026-09-09.md)。
+学习计划调整、文件精简和文本清理已随提交 `88d50a9` 推送并完成远程核对。仓库已更名为 [self-Learning](https://github.com/W-yf/self-Learning)，本地 origin 已同步更新。
+
+`published_learning_commit` 记录本次已核对的学习内容版本；后续维护记录可能有独立提交，最新仓库版本以远程 main 为准。本次发布不改变学习进度，过程见 [维护日志](logs/2026-09-10.md)。
