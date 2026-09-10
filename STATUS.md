@@ -1,26 +1,32 @@
 # 当前状态
 
-本文件同时承担进度、能力起点、近期任务和跨环境交接。计划范围见 [LEARNING_PLAN](LEARNING_PLAN.md)。
+本文件承担主仓库的总进度、能力起点、课程仓库索引、近期任务和跨环境交接入口。课程详细证据在对应独立仓库；计划范围见 [LEARNING_PLAN](LEARNING_PLAN.md)。
 
 ```yaml
 last_updated: 2026-09-10
 current_day: 2
 completed_learning_days: 1
 current_stage: goal_and_route_rebaseline
-current_stage_status: systems_first_plan_updated
-plan_revision: systems_first_with_required_labs
-scope_confirmed: 2026-09-09
+current_stage_status: management_scope_recorded_course_summary_pending
+plan_revision: systems_first_theory_lab_equal
+repository_role: learning_overview
+course_repository_strategy: separate_per_course_or_stage
+scope_confirmed: 2026-09-10
 foundation_diagnostics: not_started
 course_environment_verification: not_started
 next_task: review_then_r0_design_and_csapp_setup
-weekly_hours_assumption: 7
+weekly_hours: 7
 weekly_main_course_hours_proposed: 5
 weekly_foundation_math_hours_proposed: 1
 weekly_review_buffer_hours_proposed: 1
-weekly_budget_confirmed: false
+weekly_hours_confirmed: true
 total_route_budget: to_be_reestimated
 document_structure: simplified
-sync_status: published
+sync_status: local_changes_not_published
+course_repository_sync_status: initial_publication_verified_summary_pending
+handoff_skill_status: found_not_generated_temp_file_requires_explicit_transfer
+management_session_role: course_repositories_plan_progress_and_handoff
+next_management_task: publish_main_repository_updates_then_generate_handoff_as_needed
 repository_name: self-Learning
 repository_url: https://github.com/W-yf/self-Learning
 remote_verified_at: 2026-09-10
@@ -32,7 +38,8 @@ published_learning_commit: 88d50a983a0bde324581a9f2b85e6580c329ebab
 
 - 初始化、旧 Stage 1–3 已完成并经用户确认，详见 [历史日志](logs/2026-08-12.md)。
 - Day 1 于 2026-08-12 完成并确认巩固：安全路径通过 MSVC 编译、运行退出码为 0；新字符串 Lambda 场景的独立迁移解释通过。保留 [笔记](notes/day-01-lifetime.md) 和 [练习](exercises/day-01-lifetime/README.md)。
-- Day 2 和新 R0 未开始。本次发布与仓库维护没有增加学习日、诊断或复习作答。
+- Day 2 和新 R0 未开始。本次计划核对与仓库维护没有增加学习日、诊断或复习作答。
+- 用户明确理论与 lab 同等重要，希望通过更有深度的实验弥补以往理论体会不足；工作经验作为起点信息，不替代独立学习证据。
 
 | 范围 | 当前证据 |
 |---|---|
@@ -46,6 +53,22 @@ published_learning_commit: 88d50a983a0bde324581a9f2b85e6580c329ebab
 
 旧 B1–B7 细节可从 Git 历史查阅。Day 1 文档中旧 CMake 学习日、完整 Lambda 等后续安排已失效；历史证据与当前任务分开使用。
 
+## 课程仓库与交接索引
+
+用户已确认采用“主仓库总览＋课程/阶段独立仓库”的方式。课程目录与主仓库分开放置，并已作为附加文件夹关联到同一个 Codex 项目；主仓库保留为主要文件夹。本 session 当前定位为课程仓库管理会话，负责开启与维护独立课程仓库、回写主仓库的宏观进度与计划摘要，并按需要生成 handoff；课程学习会话负责课程内实际学习。仓库初始化和文档发布不计入学习日或掌握证据。
+
+本轮已核验课程仓库 `foundations` 使用远程地址 `https://github.com/W-yf/foundations`，分支为 `main`；本地 `main` 与远程 `main` 均为 `b435b1f2d508f9df96df5bf2c1aea08a26bf19ae`，工作区干净。课程 README 记录首次初始化提交 `94d2d4b3bf0b9cbe258db5e82bc84546fe04a345`；当前提交是后续筹备发布记录，不是学习成果。课程尚未开始，环境、代码、测试和学习证据均无；课程 README 的 `overview_sync_status` 仍为待主仓库摘要发布。
+
+| 课程/阶段 | 远程地址 | 分支 | 状态入口 | handoff | 已核对成果提交 | 当前状态 |
+|---|---|---|---|---|---|---|
+| R0 / foundations | [仓库](https://github.com/W-yf/foundations) | `main` | [README.md](https://github.com/W-yf/foundations/blob/main/README.md)（课程状态入口） | 未生成；handoff skill 已找到，临时文件需显式传递 | `b435b1f2d508f9df96df5bf2c1aea08a26bf19ae`（筹备发布记录，非学习成果） | 首次同步已核验；课程未开始；环境、代码、测试和学习证据均无；主仓库汇总待发布 |
+
+每次实际启用课程仓库，在此维护一条记录：课程/阶段、仓库地址与分支、详细状态文档、最新 handoff 入口、已核对的成果提交、理论/实验进度摘要与下一步。课程原始记录归课程仓库，本文件汇总并链接证据；课程已有新成果而这里尚未回写时，标记汇总待更新，再依据已发布证据同步。
+
+新对话接手先拉取主仓库与当前课程仓库，再核对状态文件、交接日期和基线提交；学习结束先推送并核对课程成果，再回写并同步主仓库。统一复习队列继续由本仓库维护，课程仓库提供证据引用。现有 Day 1 文件保留原位。
+
+用户计划使用 handoff skill 生成交接；本轮已找到该 skill，但尚未生成 handoff 文档。skill 要求输出到操作系统临时目录，临时文件不会随 Git 自动同步，后续必须显式传递并登记入口。规则已记录在 AGENTS，不将聊天摘要或过期交接当作最新状态。
+
 ## 下一学习会话
 
 主线编号现为 R0 短准备、R1 CSAPP、R2 OS、R3 离散/算法、R4 网络、R5 数据库，另有 M 基础数学支线。下表均未开始，不把文档更新算作学习。
@@ -53,17 +76,23 @@ published_learning_commit: 88d50a983a0bde324581a9f2b85e6580c329ebab
 | 近期任务 | 产出 |
 |---|---|
 | 检查到期复习 | 按 [REVIEW](REVIEW.md) 一次一题；当前 3 张 active 到期、3 张 suspended、2 个 parked，实际开课日重新筛选 |
-| R0-01 最小环境与起点 | 检查 C/C++ 编译、GDB 与 Python 测试；只诊断当前任务所需知识，记录环境可用性 |
+| R0-01 最小环境与起点 | 检查 C/C++ 编译、GDB 与 Python 测试，用自拟小程序核对 C 指针/数组/结构体及分配释放；记录当前缺口与环境可用性 |
 | R0-02 规格与测试 | 读 Testing/Specifications，写非负权有向图的接口边界和契约测试 |
 | R0-03 抽象与实现 | 读 ADT/表示不变量，完成邻接表与边列表两种小实现，共用测试 |
 | R1-01 开始 CSAPP | R0 完成后读数据表示并启动 Data Lab，核对 btest/dlc 与第一组边界题；随后按计划进入 Bomb/Cache/Malloc |
 
 准备阶段沿用原稿约 12 小时的预算基线，完成即进入 CSAPP；OS 紧随其后，完整算法课不作为 OS 开课条件。R0 以外的课内任务与验收只在 LEARNING_PLAN 维护。
 
-每周约 7 小时仍是假设，本轮暂分主课 5 小时、基础数学 1 小时、复习/缓冲 1 小时。六阶段原稿工时参考合计 552 小时，新增数学完整工时与最终周期尚待估算。恢复既定实验与优先级已经写入计划，不代表确认全部工时或已完成课程环境验证。
+用户于 2026-09-10 再次确认原稿为底稿，明确 CSAPP/OS 优先、网络/数据库后置，并确认每周约 7 小时。5 小时主课、1 小时基础数学、1 小时复习/缓冲仍为试行分配；六阶段 552 小时保留原稿基线，新增数学、前置补缺与最终周期尚待实际校准。
+
+本轮已核对原稿与 CS 自学指南，将 CSAPP 章节/实验对应、进入 OS 前的 I/O 和体系结构衔接、xv6 实验所需理论写入 LEARNING_PLAN；来源见 RESOURCES。没有新增整门必修课或删减既定实验。首次在 R0 结束后按实际耗时调整，规划核查不代表课程环境验证通过。
+
+随后按用户说明明确理论/实验分别验收，主课内两者各约一半作为试行起点。已读取所提供 Dr.Dng CSAPP 视频的简介和 23P 目录，记录按主题选集与缺口；尚未逐集试听或开始学习。视频与教材的使用分工见 RESOURCES，精选实验不缩减既定理论范围。
 
 ## 同步说明
 
-学习计划调整、文件精简和文本清理已随提交 `88d50a9` 推送并完成远程核对。仓库已更名为 [self-Learning](https://github.com/W-yf/self-Learning)，本地 origin 已同步更新。
+此前学习计划调整、文件精简和文本清理已随提交 `88d50a9` 推送并完成远程核对；后续维护提交为 `72ab2bc`。本轮修改前只读核对远程 main 与本地 HEAD 均为 `72ab2bcd1ec2f61a0c9f178b9ca39a3910a2e2d9`。
 
-`published_learning_commit` 记录本次已核对的学习内容版本；后续维护记录可能有独立提交，最新仓库版本以远程 main 为准。本次发布不改变学习进度，过程见 [维护日志](logs/2026-09-10.md)。
+仓库已更名为 [self-Learning](https://github.com/W-yf/self-Learning)。历史日志中的 origin 已更新描述属于当时环境；本次本地 origin 仍为旧名称地址，已能核对相同远程 main，本轮未修改远程配置。
+
+`published_learning_commit` 保留此前已发布的学习内容版本。本轮原稿/网页核对、理论与实验并重、视频使用、多仓库分工和同步约定只写入本地文档，尚未提交或推送，不能当作另一环境已收到的状态。当前主仓库 6 个已跟踪文件的未提交修改（`AGENTS.md`、`LEARNING_PLAN.md`、`README.md`、`RESOURCES.md`、`STATUS.md`、`logs/2026-09-10.md`）仍未发布；课程仓库的首次同步已核验，但主仓库汇总仍待发布；另有未跟踪文件，保留其现状。过程见 [当日日志](logs/2026-09-10.md)。
