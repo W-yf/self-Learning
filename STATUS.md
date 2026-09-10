@@ -7,7 +7,7 @@ last_updated: 2026-09-10
 current_day: 2
 completed_learning_days: 1
 current_stage: goal_and_route_rebaseline
-current_stage_status: management_scope_recorded_course_summary_pending
+current_stage_status: published_ready_for_foundations_session
 plan_revision: systems_first_theory_lab_equal
 repository_role: learning_overview
 course_repository_strategy: separate_per_course_or_stage
@@ -22,16 +22,18 @@ weekly_review_buffer_hours_proposed: 1
 weekly_hours_confirmed: true
 total_route_budget: to_be_reestimated
 document_structure: simplified
-sync_status: local_changes_not_published
-course_repository_sync_status: initial_publication_verified_summary_pending
-handoff_skill_status: found_not_generated_temp_file_requires_explicit_transfer
+sync_status: published_content_verified
+course_repository_sync_status: initial_publication_verified_overview_recorded
+handoff_skill_status: available
+handoff_document: foundations-start-handoff-2026-09-10.md
+handoff_status: generated_temp_file_requires_explicit_transfer
 management_session_role: course_repositories_plan_progress_and_handoff
-next_management_task: publish_main_repository_updates_then_generate_handoff_as_needed
+next_management_task: await_course_progress_and_maintain_overview
 repository_name: self-Learning
 repository_url: https://github.com/W-yf/self-Learning
 remote_verified_at: 2026-09-10
 remote_verified_branch: main
-published_learning_commit: 88d50a983a0bde324581a9f2b85e6580c329ebab
+published_learning_commit: bbeae7510d662c5b0fc30a764131c6cbe309f6f6
 ```
 
 ## 已有成果与起点
@@ -57,17 +59,17 @@ published_learning_commit: 88d50a983a0bde324581a9f2b85e6580c329ebab
 
 用户已确认采用“主仓库总览＋课程/阶段独立仓库”的方式。课程目录与主仓库分开放置，并已作为附加文件夹关联到同一个 Codex 项目；主仓库保留为主要文件夹。本 session 当前定位为课程仓库管理会话，负责开启与维护独立课程仓库、回写主仓库的宏观进度与计划摘要，并按需要生成 handoff；课程学习会话负责课程内实际学习。仓库初始化和文档发布不计入学习日或掌握证据。
 
-本轮已核验课程仓库 `foundations` 使用远程地址 `https://github.com/W-yf/foundations`，分支为 `main`；本地 `main` 与远程 `main` 均为 `b435b1f2d508f9df96df5bf2c1aea08a26bf19ae`，工作区干净。课程 README 记录首次初始化提交 `94d2d4b3bf0b9cbe258db5e82bc84546fe04a345`；当前提交是后续筹备发布记录，不是学习成果。课程尚未开始，环境、代码、测试和学习证据均无；课程 README 的 `overview_sync_status` 仍为待主仓库摘要发布。
+本轮已核验课程仓库 `foundations` 使用远程地址 `https://github.com/W-yf/foundations`，分支为 `main`；本地 `main` 与远程 `main` 均为 `b435b1f2d508f9df96df5bf2c1aea08a26bf19ae`，工作区干净。课程 README 记录首次初始化提交 `94d2d4b3bf0b9cbe258db5e82bc84546fe04a345`；当前提交是后续筹备发布记录，不是学习成果。课程尚未开始，环境、代码、测试和学习证据均无。该版本课程 README 中“主仓库摘要待发布”和“handoff 未生成”保留的是本次发布前的快照；本次主仓库汇总已发布、交接已生成，课程文件尚未回写这些元数据，以本节较新的核验事实为准。
 
 | 课程/阶段 | 远程地址 | 分支 | 状态入口 | handoff | 已核对成果提交 | 当前状态 |
 |---|---|---|---|---|---|---|
-| R0 / foundations | [仓库](https://github.com/W-yf/foundations) | `main` | [README.md](https://github.com/W-yf/foundations/blob/main/README.md)（课程状态入口） | 未生成；handoff skill 已找到，临时文件需显式传递 | `b435b1f2d508f9df96df5bf2c1aea08a26bf19ae`（筹备发布记录，非学习成果） | 首次同步已核验；课程未开始；环境、代码、测试和学习证据均无；主仓库汇总待发布 |
+| R0 / foundations | [仓库](https://github.com/W-yf/foundations) | `main` | [README.md](https://github.com/W-yf/foundations/blob/main/README.md)（课程状态入口） | 已生成开课交接；临时文件需显式传递，入口见下方 | `b435b1f2d508f9df96df5bf2c1aea08a26bf19ae`（筹备发布记录，非学习成果） | 首次同步已核验；课程未开始；环境、代码、测试和学习证据均无；主仓库汇总已发布 |
 
 每次实际启用课程仓库，在此维护一条记录：课程/阶段、仓库地址与分支、详细状态文档、最新 handoff 入口、已核对的成果提交、理论/实验进度摘要与下一步。课程原始记录归课程仓库，本文件汇总并链接证据；课程已有新成果而这里尚未回写时，标记汇总待更新，再依据已发布证据同步。
 
 新对话接手先拉取主仓库与当前课程仓库，再核对状态文件、交接日期和基线提交；学习结束先推送并核对课程成果，再回写并同步主仓库。统一复习队列继续由本仓库维护，课程仓库提供证据引用。现有 Day 1 文件保留原位。
 
-用户计划使用 handoff skill 生成交接；本轮已找到该 skill，但尚未生成 handoff 文档。skill 要求输出到操作系统临时目录，临时文件不会随 Git 自动同步，后续必须显式传递并登记入口。规则已记录在 AGENTS，不将聊天摘要或过期交接当作最新状态。
+已按用户指定的 handoff skill 生成 `foundations-start-handoff-2026-09-10.md`，用于新的 Foundations/R0 学习会话，包含基线提交、必读入口、接手事项和建议技能。文件位于生成机器的操作系统临时目录，具体文件通过管理会话交付，公开索引只记录文件名；换电脑或新会话时需显式传递，不会随 Git 自动同步。长期计划、进度和学习证据仍在各仓库，临时交接不可作为唯一状态载体。本次尚未创建课程学习会话。
 
 ## 下一学习会话
 
@@ -95,4 +97,6 @@ published_learning_commit: 88d50a983a0bde324581a9f2b85e6580c329ebab
 
 仓库已更名为 [self-Learning](https://github.com/W-yf/self-Learning)。历史日志中的 origin 已更新描述属于当时环境；本次本地 origin 仍为旧名称地址，已能核对相同远程 main，本轮未修改远程配置。
 
-`published_learning_commit` 保留此前已发布的学习内容版本。本轮原稿/网页核对、理论与实验并重、视频使用、多仓库分工和同步约定只写入本地文档，尚未提交或推送，不能当作另一环境已收到的状态。当前主仓库 6 个已跟踪文件的未提交修改（`AGENTS.md`、`LEARNING_PLAN.md`、`README.md`、`RESOURCES.md`、`STATUS.md`、`logs/2026-09-10.md`）仍未发布；课程仓库的首次同步已核验，但主仓库汇总仍待发布；另有未跟踪文件，保留其现状。过程见 [当日日志](logs/2026-09-10.md)。
+本轮原稿/网页核对、理论与实验并重、视频使用、管理会话职责、多仓库分工与 foundations 索引已通过提交 `bbeae7510d662c5b0fc30a764131c6cbe309f6f6` 推送并核对远程 main。`published_learning_commit` 记录这次已核验的内容发布；本节和当日日志为发布后的维护记录，最新完整文档版本以远程 main 为准。
+
+课程仓库仍保持已核验的 `b435b1f2d508f9df96df5bf2c1aea08a26bf19ae`，本次未修改课程文件。主仓库保留一个既有未跟踪的本机配置文件，未纳入提交，不属于学习材料或跨电脑接手依赖。发布和生成交接不推进学习日、掌握层级或复习结果。过程见 [当日日志](logs/2026-09-10.md)。
