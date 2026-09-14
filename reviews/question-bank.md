@@ -1,7 +1,7 @@
 # 间隔复习题库
 
 ```yaml
-last_updated: 2026-09-10
+last_updated: 2026-09-11
 schedule: ../REVIEW.md
 question_mode: one_at_a_time
 ```
@@ -18,9 +18,13 @@ question_mode: one_at_a_time
 
 | ID | 主题 | 来源 | 状态 | interval_step | last_reviewed | next_review | last_result |
 | --- | --- | --- | --- | ---: | --- | --- | --- |
-| RV-D1-001 | 返回流程的时间顺序 | Day 1 巩固易混点 | active | 0 | 2026-09-10 | 2026-09-11 | failed |
-| RV-D1-003 | 按值返回与悬空观察者 | Day 1 核心证据 | active | 0 | 2026-09-10 | 2026-09-11 | failed |
-| RV-D1-006 | Lambda 引用捕获的生命周期 | Day 1 迁移证据 | active | 0 | 2026-09-10 | 2026-09-11 | partial |
+| RV-D1-001 | 返回流程的时间顺序 | Day 1 巩固易混点 | active | 1 | 2026-09-11 | 2026-09-12 | passed |
+| RV-D1-003 | 按值返回与悬空观察者 | Day 1 核心证据 | active | 1 | 2026-09-11 | 2026-09-12 | passed |
+| RV-D1-006 | Lambda 引用捕获的生命周期 | Day 1 迁移证据 | active | 1 | 2026-09-11 | 2026-09-12 | passed |
+
+## 2026-09-11 复习摘要
+
+三题均通过：具体代码中的返回值取得与局部析构顺序、按值返回与悬空引用、引用捕获失效及按值捕获修复。首次通过后间隔为 1 天，下一最早复习日期为 2026-09-12；后续继续用具体代码验证，不外推为完整语言主题掌握。
 
 ## 2026-09-10 复习范围清理
 
