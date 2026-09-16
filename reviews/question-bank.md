@@ -1,7 +1,7 @@
 # 间隔复习题库
 
 ```yaml
-last_updated: 2026-09-11
+last_updated: 2026-09-16
 schedule: ../REVIEW.md
 question_mode: one_at_a_time
 ```
@@ -18,9 +18,23 @@ question_mode: one_at_a_time
 
 | ID | 主题 | 来源 | 状态 | interval_step | last_reviewed | next_review | last_result |
 | --- | --- | --- | --- | ---: | --- | --- | --- |
-| RV-D1-001 | 返回流程的时间顺序 | Day 1 巩固易混点 | active | 1 | 2026-09-11 | 2026-09-12 | passed |
-| RV-D1-003 | 按值返回与悬空观察者 | Day 1 核心证据 | active | 1 | 2026-09-11 | 2026-09-12 | passed |
-| RV-D1-006 | Lambda 引用捕获的生命周期 | Day 1 迁移证据 | active | 1 | 2026-09-11 | 2026-09-12 | passed |
+| RV-D1-001 | 返回流程的时间顺序 | Day 1 巩固易混点 | active | 0 | 2026-09-16 | 2026-09-17 | failed |
+| RV-D1-003 | 按值返回与悬空观察者 | Day 1 核心证据 | active | 2 | 2026-09-16 | 2026-09-19 | passed |
+| RV-D1-006 | Lambda 引用捕获的生命周期 | Day 1 迁移证据 | active | 2 | 2026-09-16 | 2026-09-19 | passed |
+| RV-R0-001 | Test-first 的顺序、依据与调试价值 | R0 Testing | active | 0 | — | 2026-09-17 | not_reviewed |
+| RV-R0-002 | 测试套件的 correct、thorough、small | R0 Testing | active | 0 | — | 2026-09-17 | not_reviewed |
+
+## 2026-09-16 复习摘要
+
+- RV-D1-001：输出判断正确，但将调用方继续执行置于局部析构之前，判为 failed，间隔重置。下次用新代码独立验证返回值确定、局部析构、调用方继续执行的顺序；不预设额外临时对象，听过解释不计作独立掌握。
+- RV-D1-003：通过；正确区分按值取得的整数与指向调用方仍存活对象的引用。
+- RV-D1-006：通过；识别作用域结束后的引用捕获失效，并在更新目标值后按值捕获，满足延后调用的输出要求。
+
+本轮结束，继续 R0 Testing 的 Test-first programming；整体掌握层级不变。
+
+随后完成 Test-first programming 阅读与独立描述：能够说明 Spec → Test → Implement、从 spec 得到预期结果，以及尽早按功能测试会缩小失败时的排查范围。新增 RV-R0-001，首次间隔复习最早为 2026-09-17。
+
+继续完成 Systematic testing 当前小节：能够区分合法实现与错误实现，说明 thorough 不等于用例更多或发现所有错误，并解释 small 对运行频率和维护成本的价值及其不能牺牲 thorough 的边界。新增 RV-R0-002，首次间隔复习最早为 2026-09-17。
 
 ## 2026-09-11 复习摘要
 
@@ -102,3 +116,27 @@ std::function<std::string()> make_reader()
 - 返回的闭包对象可以继续存在，但局部 `text` 在函数退出时结束生命周期。
 - `[&text]` 只保存非拥有引用关系，随后悬空。
 - 改为 `[text] { return text; }`，闭包对象在 Lambda 表达式求值时保存独立副本。
+
+## RV-R0-001：Test-first 的顺序、依据与调试价值
+
+**问题**
+
+面对一个已有 spec、尚无实现的新函数，说明 Test-first 的开发顺序、测试预期从哪里来，以及逐个功能尽早测试为什么能降低调试难度。
+
+**答案要点（回答后核对）**
+
+- 顺序是 Spec → Test → Implement；测试和函数签名本身也可能是代码，因此准确表述是“在实现代码之前”。
+- 测试用例的预期行为由 spec 决定，不依赖实现采用的具体算法。
+- 每完成一个小模块就验证，使未验证代码和最近改动范围较小；失败时更容易把问题定位到当前模块或近期改动。
+
+## RV-R0-002：测试套件的 correct、thorough、small
+
+**问题**
+
+给定一个具体函数 spec 和若干测试，判断测试套件是否 correct、thorough、small，并分别说明依据。题面应使用新的函数和用例，不只要求背诵三个名称。
+
+**答案要点（回答后核对）**
+
+- correct 评价测试套件：它是 spec 的合法 client，并接受所有符合 spec 的实现；错误实现可以且应该被相应测试拒绝。
+- thorough 表示能够发现实际实现中可能出现的、尤其是程序员容易犯的错误，不等于用例更多，也不保证发现所有 bug。
+- small 表示用较少的用例保持快速、易维护和可频繁运行，但不能通过删除重要用例来牺牲 thorough。
