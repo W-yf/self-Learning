@@ -23,33 +23,35 @@
 ## 当前状态
 
 ```yaml
-last_updated: 2026-09-14
+last_updated: 2026-09-16
 course_id: R0
 repository_name: foundations
 repository_url: https://github.com/W-yf/foundations
 repository_role: course
 branch: main
 setup_status: remote_repository_initialized
-learning_status: testing_in_progress_r0_01_pending_personal_computer
+learning_status: testing_partitioning_next_r0_01_pending_personal_computer
 environment_verification: pending_personal_computer
-theory_evidence: testing_limits_example_discussed
+theory_evidence: testing_limits_test_first_and_suite_criteria_explained_independently
 lab_evidence: none
 remote_status: configured
-sync_status: verify_head_against_origin_main
+sync_status: verified_published
 initial_published_commit: 94d2d4b3bf0b9cbe258db5e82bc84546fe04a345
 initial_publish_verified_on: 2026-09-10
 overview_sync_status: see_main_repository_status
 handoff_status: repository_readme_is_current_entry
-next_task: due_review_then_testing_test_first_programming
+next_task: testing_input_partitioning
 ```
 
-当前处于 Testing 入门：已讨论测试的作用与边界，尚未确认 Test-first Programming 阅读完成，下一步继续该小节。正式项目作业尚未启动。schedule（标签 1.2.2）的 teach 导读 01 已备好，留待相关理论与小练习完成后使用；未记录为已阅读或掌握。R0-01 环境验证和所有实验留待个人电脑完成；理论与实验分别验收，尚无完整 R0 验收。
+当前处于 Testing：2026-09-16 已完成 Test-first programming 与 Systematic testing 当前小节。用户能够独立说明 Spec → Test → Implement、预期结果来源和调试价值，也能解释测试套件的 correct、thorough、small 及其平衡；两部分核心内容达到 **2. 能够解释**。下一步阅读 Choosing test cases by partitioning。正式项目作业尚未启动。schedule（标签 1.2.2）的 teach 导读 01 已备好，留待相关理论与小练习完成后使用；未记录为已阅读或掌握。R0-01 环境验证和所有实验留待个人电脑完成；理论与实验分别验收，尚无完整 R0 验收。
 
 本 README 是当前交接入口，旧临时开课快照已过时，无需携带。环境初查见 [日志](logs/2026-09-10.md)；主仓库 [STATUS](https://github.com/W-yf/self-Learning/blob/main/STATUS.md) 登记已核对的课程提交。两仓库是否同步，以本地 HEAD 和远程 main 的实际比较为准。
 
 ## 学习笔记与成果入口
 
 `notes/` 只保存课程知识和个人理解，必要时附来源、边界与例子；`exercises/` 保存实现与验证。学习时不逐题改文件，小节结束后整理，课程结束时统一审校、去重和精简。问答流水、提示过程与教学评语不写入笔记或另存为学习日志。
+
+每个阅读、视频或练习小节结束后，先由用户不依赖提示、用自己的话描述所学内容，再判断是否达到相应掌握层级；必要时一次只追问一个新的具体场景。已阅读或听过解释本身不等于掌握。仓库只记录精简知识、已经表达清楚的个人理解和必要证据结论，不保存详细复述原文。
 
 | 主题 | 内容 |
 |---|---|
@@ -61,12 +63,12 @@ next_task: due_review_then_testing_test_first_programming
 ## 个人电脑接续
 
 1. 在已有的 `self-Learning` 和 `foundations` 本地仓库中分别执行 `git pull --ff-only`，先确认没有会被覆盖的本地改动。有分叉时核对处理，不强制覆盖。
-2. 读取主仓库 [STATUS](https://github.com/W-yf/self-Learning/blob/main/STATUS.md)、两仓库 AGENTS、本 README 和 [Testing 笔记](notes/testing.md)。最近一次复习为 2026-09-11，三题下次日期均为 2026-09-12；截至 2026-09-14 已到期。正式学习前读取主仓库 REVIEW 和题库，一次一道不同场景的具体代码题。本次仅整理同步，未完成新的复习或学习日。
+2. 读取主仓库 [STATUS](https://github.com/W-yf/self-Learning/blob/main/STATUS.md)、两仓库 AGENTS、本 README 和 [Testing 笔记](notes/testing.md)。2026-09-16 本轮复习已结束；结果和下次日期以主仓库 [题库](https://github.com/W-yf/self-Learning/blob/main/reviews/question-bank.md) 为准。后续正式学习前按实际日期筛选到期卡，一次一道不同场景的具体代码题。Test-first programming 已完成，继续下述理论任务。
 3. 个人电脑先检查已有系统与 C/C++、GDB、Python 环境，保留可用配置；虚拟机或 WSL2 尚未选定，不据此前电脑的检查结果推断本机状态。环境验证未完成前仍可继续理论阅读。
-4. 理论下一步：学习 [Testing](https://web.mit.edu/6.031/www/sp22/classes/03-testing/) 的 **Test-first Programming**，到 **Systematic testing** 标题前停止；可配合 [视频 P21](https://www.bilibili.com/video/BV1Tp4y197XX/?p=21) 的 Test-first Programming 部分，再做一道新的具体小题。随后按主题继续分区、边界与测试方法，再衔接 Specifications。能够独立说明约定、选择代表性输入并确定预期结果后，再进行作业所需的项目导读与限定改动。schedule 多标签查询仍是自拟练习候选，既有 R0 图练习验收尚未调整。
+4. 理论下一步：继续 [Testing](https://web.mit.edu/6.031/www/sp22/classes/03-testing/) 的 **Choosing test cases by partitioning**，先读到该节第一处 **reading exercises** 前停止，理解输入空间、分区和子域；随后再学习边界与测试方法。能够独立说明约定、选择代表性输入并确定预期结果后，再进行作业所需的项目导读与限定改动。schedule 多标签查询仍是自拟练习候选，既有 R0 图练习验收尚未调整。
 
 5. 实验下一步：完成 R0-01 的编译运行、GDB 单步与 Python 测试验证，再独立编写自拟 C 小程序检查指针、数组、结构体及分配/释放。不得把环境检查或知识笔记当作实验完成。
 
 小节结束整理笔记，本轮结束或交接时更新必要进度并同步两仓库。学习接续不需要复制聊天或临时交接文件；编译器、调试器和其他本机工具需在个人电脑单独核验。
 
-本轮同步范围为上述接续信息和备用 teach 页面；发布版本以 Git 提交及主仓库课程索引为准。生成教学材料不提高掌握层级。
+2026-09-14 已发布接续信息和备用 teach 页面，版本见主仓库课程索引；生成教学材料不提高掌握层级。2026-09-16 发布复习接续信息、Test-first programming 与 Systematic testing 学习结果；实验状态未推进。本次发布版本由主仓库课程索引记录并核对。
