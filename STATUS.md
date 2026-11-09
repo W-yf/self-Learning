@@ -17,13 +17,13 @@ weekly_hours_stage_2: 9-11
 weekly_hours_stage_2_confirmed: 2026-11-09
 weekly_hours_stage_3_proposed: 6-8
 next_task: start_cs50x_week_0_and_create_course_directory
-sync_status: migration_published_cleanup_update
-legacy_repository_deletion: manual_github_deletion_required
-legacy_local_directory: empty_directory_in_use
+sync_status: migration_published
+legacy_repository_deletion: deleted_by_user_verified_404
+legacy_local_directory: removed
 foundations_import_commit: a7d4ea2d0e2780650567f157de2c165828e9b34b
 repository_url: https://github.com/W-yf/self-Learning
 remote_pulled_at: 2026-11-09
-published_main_baseline: 75ae3622d079c591b173c42e266f05d3de02532a
+published_main_baseline: 86d902c1e3a0a301adbde34ebb80dbeff2f5d2d0
 ```
 
 ## 本次调整
@@ -65,6 +65,6 @@ foundations 的已跟踪文件与原提交历史已整体迁入本仓库；来�
 
 日常只拉取、提交与推送 self-Learning；先读本 STATUS，再读课程 README，学后在同一提交中更新成果与必要进度。
 
-2026-11-09 用户已成功推送，已核对本地 HEAD、origin/main 与远程 main 均为 f8ec11b47bc1658cc803b10d81ae4e6ca190e90f，包含迁移提交 6fb5a8a 和全部课程历史。旧本地仓库文件已清理，仅剩被进程占用的空目录；旧 GitHub 仓库可手动删除。文档简化与清理结果随本次维护提交同步，详情见 [当日日志](logs/2026-11-09.md)。
+2026-11-09 已发布迁移成果与文档简化，包含迁移提交 6fb5a8a 和全部课程历史。用户已删除旧 GitHub 仓库，复查旧地址返回 404；旧本地空目录也已移除。后续仅维护 self-Learning，详情见 [当日日志](logs/2026-11-09.md)。
 
 现有 origin 使用旧名称 cuda-selfLearning 地址，可访问同一主仓库，本轮不修改远程配置。既有未跟踪 CppProperties.json 未改动、不提交。文件长度元数据异常仍用完整字节流与 Git 对象比对规避，不据工作区 diff 的假截断覆盖历史文件。
