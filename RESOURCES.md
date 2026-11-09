@@ -44,7 +44,7 @@ CS50x 的年份入口本次重定向到官方当前页面；正式开课以当�
 | [NVIDIA Floating Point and IEEE 754](https://docs.nvidia.com/cuda/floating-point/index.html) | 舍入、FMA、CPU/GPU 差异与编译选项的首选免费资料 |
 | [Floating Point Numerics for Games and Simulations](https://www.routledge.com/Floating-Point-Numerics-for-Games-and-Simulations/Badizadegan/p/book/9781003565543) | Nima Badizadegan，CRC Press，2025；选查数值误差与性能，不必为几小时回顾购买或通读 |
 | CUDA by Example | 轻量历史示例，API/构建以当前官方文档为准，不直接承诺旧代码可运行 |
-| Computational Geometry in C，Joseph O'Rourke | CAM 几何问题按需参考，不新增计算几何整课 |
+| Computational Geometry in C，Joseph O'Rourke | 几何处理问题按需参考，不新增计算几何整课 |
 
 PMPP 相关 Applied Parallel Programming / Heterogeneous Parallel Programming 视频可按同一主题辅助，具体授课年份、播放列表和作业版次在开课时匹配。GPU MODE / GPU Puzzles 是可选练习来源，本轮未逐项核验，不纳入三个 kernel 的强制验收。
 
@@ -52,4 +52,4 @@ PMPP 相关 Applied Parallel Programming / Heterogeneous Parallel Programming �
 
 [foundations](courses/foundations/README.md) 保留旧 R0 Testing 笔记和来源；其课程范围已退出当前主线。课程资料和成果统一放在本仓库的 `courses/<course>/`，总进度见 [STATUS](STATUS.md)；CS50x 目录待实际启动时创建。独立项目或需隔离的受限作业才另设仓库。旧离散/算法、网络、数据库及其他候选资源可从 Git 历史查询，不作为待补清单。
 
-课程资料可阅读不等于可公开复制或公布答案。使用实验时按当前课程规则处理框架、测试和解答；公开仓库只保存允许公开的内容，不复制公司代码或客户数据。CAM 收束采用独立实现和合成数据。
+课程资料可阅读不等于可公开复制或公布答案。使用实验时按当前课程规则处理框架、测试和解答；公开仓库只保存允许公开的内容，不复制公司代码或客户数据。综合实践采用独立实现和合成数据。
