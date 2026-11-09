@@ -1,12 +1,15 @@
-# 间隔复习题库
+# 历史复习题库（已停用）
+
+2026-11-09 起取消全部独立复习调度。以下题目、日期和结果仅保留历史，不再筛选到期题、更新间隔或用于阻塞新课程；历史未通过仍是未通过，不因停用而改为完成。
 
 ```yaml
 last_updated: 2026-09-16
-schedule: ../REVIEW.md
-question_mode: one_at_a_time
+archived_at: 2026-11-09
+schedule: disabled
+question_mode: disabled
 ```
 
-## 字段说明
+## 历史字段说明（不再执行）
 
 - `status`：`active` 表示进入复习队列；`parked` 表示完整主题尚未系统学习，只记录断点；`suspended` 表示原已启用卡因当前学习范围调整暂停调度，保留历史记录。只将 `active` 卡纳入到期筛选；这些状态不是掌握层级，暂停不表示已完成或已通过。
 - `interval_step`：`0` 表示尚未首次通过；通过后依次使用 1、3、7、14、30、60、120 天。
@@ -14,7 +17,7 @@ question_mode: one_at_a_time
 - `last_result`：只使用 `not_reviewed`、`passed`、`partial`、`failed`。
 - 答案要点供复习结束后校正，不应在提问时提前展示。
 
-## 当前队列
+## 停用前队列快照（不再调度）
 
 | ID | 主题 | 来源 | 状态 | interval_step | last_reviewed | next_review | last_result |
 | --- | --- | --- | --- | ---: | --- | --- | --- |

@@ -1,107 +1,71 @@
 # 当前状态
 
-本文件承担主仓库的总进度、能力起点、课程仓库索引、近期任务和跨环境交接入口。课程详细证据在对应独立仓库；计划范围见 [LEARNING_PLAN](LEARNING_PLAN.md)。
+本文件维护总进度、已有证据、课程仓库索引和接续入口。详细范围见 [学习计划](LEARNING_PLAN.md)，资料见 [RESOURCES](RESOURCES.md)。
 
 ```yaml
-last_updated: 2026-09-16
+last_updated: 2026-11-09
 current_day: 2
 completed_learning_days: 1
-current_stage: foundations_r0
-current_stage_status: testing_partitioning_next_r0_01_pending_personal_computer
-plan_revision: systems_first_theory_lab_equal
+current_stage: stage_1_cs50x_linear_algebra
+current_stage_status: planned_not_started
+plan_revision: graphics_cuda_course_exercises
+scope_confirmed: 2026-11-09
+review_schedule: disabled
 repository_role: learning_overview
 course_repository_strategy: separate_per_course_or_stage
-scope_confirmed: 2026-09-10
-foundation_diagnostics: not_started
-course_environment_verification: pending_personal_computer
-next_task: testing_input_partitioning
-weekly_hours: 7
-weekly_main_course_hours_proposed: 5
-weekly_foundation_math_hours_proposed: 1
-weekly_review_buffer_hours_proposed: 1
-weekly_hours_confirmed: true
-total_route_budget: to_be_reestimated
-document_structure: simplified
-sync_status: verified_published
-course_repository_sync_status: verified_published
-handoff_document: https://github.com/W-yf/foundations/blob/main/README.md
-handoff_status: tracked_repository_documents
-management_session_role: course_repositories_plan_progress_and_handoff
-next_management_task: maintain_overview_when_course_progress_changes
-repository_name: self-Learning
+weekly_hours_stage_1: 7
+weekly_hours_stage_2: 9-11
+weekly_hours_stage_2_confirmed: 2026-11-09
+weekly_hours_stage_3_proposed: 6-8
+next_task: start_cs50x_week_0_and_register_course_repository
+sync_status: local_commit_pending_push
+course_repository_sync_status: foundations_committed_pending_push
 repository_url: https://github.com/W-yf/self-Learning
-remote_verified_at: 2026-09-16
-remote_verified_branch: main
-previous_verified_main_commit: ce65e60f8d7553798f62c19955cbbcb227185a7c
+remote_pulled_at: 2026-11-09
+published_main_baseline: 75ae3622d079c591b173c42e266f05d3de02532a
 ```
+
+## 本次调整
+
+- 用户取消独立复习排程，改用课程或书籍布置的习题、作业和实验检验成果；不再学前抽题、不更新间隔、不追加独立口述考试。
+- 当前路线：CS50x/线代 → CSAPP/OSTEP 与 CPU 图形学 → PMPP/CUDA 与 CAM。第 2 阶段周投入 **9–11 小时已确认**；其余投入和阶段估时见计划。
+- 旧 R0 不再作为主线前置；新路线尚未开课、未创建新课程仓库。本文更新不推进学习日或掌握层级，不表示任何旧任务已经完成。
 
 ## 已有成果与起点
 
-- 初始化、旧 Stage 1–3 已完成并经用户确认，详见 [历史日志](logs/2026-08-12.md)。
-- Day 1 于 2026-08-12 完成并确认巩固：安全路径通过 MSVC 编译、运行退出码为 0；新字符串 Lambda 场景的独立迁移解释通过。保留 [笔记](notes/day-01-lifetime.md) 和 [练习](exercises/day-01-lifetime/README.md)。
-- 最近一次复习为 2026-09-16：返回流程题未通过，最早于 2026-09-17 再验证；按值返回与引用、Lambda 捕获两题通过，下次为 2026-09-19，详见 [题库](reviews/question-bank.md)。本轮已结束，继续 Test-first programming；学习仍在 Day 2，已完成学习日仍为 1，个人电脑环境与实验未推进，整体掌握层级不变。
-- R0-01 已完成当前终端的环境初查，但编译、GDB 单步与 Python 测试均未通过验证。最新试行分工为理论学习端承担理论、视频和复习，个人电脑承担全部实验；个人电脑环境尚未核验，R0-01 留待该端完成，虚拟机或 WSL2 尚未选定。当前可先读 R0-02 Testing，理论与 lab 按主题接续并分别验收。详细记录见 [课程日志](https://github.com/W-yf/foundations/blob/main/logs/2026-09-10.md)。课程记录已发布，已核对版本见课程索引。
-- 用户明确理论与 lab 同等重要，希望通过更有深度的实验弥补以往理论体会不足；工作经验作为起点信息，不替代独立学习证据。
-- 课程笔记只保留课程知识和个人理解，必要时附权威来源与例子；小节结束整理，课程结束统一审校，不保存详细学习过程。2026-09-16 已完成 Test-first programming 与 Systematic testing 当前小节：能够独立说明 Spec → Test → Implement、预期结果来源和调试价值，也能解释测试套件的 correct、thorough、small 及其平衡；两部分核心内容达到 **2. 能够解释**。下一步进入测试输入分区，课程笔记已发布；无课程整体验收。
-- RV-D1-001 仍需独立区分返回值确定与调用方继续执行的时刻；2026-09-16 的解释不计作独立掌握，下次使用新场景验证，避免预设额外临时对象。
+- Day 1（2026-08-12）：安全路径经 MSVC 编译运行，退出码 0；有新字符串 Lambda 场景的独立迁移解释。保留 [笔记](notes/day-01-lifetime.md) 与 [练习](exercises/day-01-lifetime/README.md)。
+- foundations（2026-09-16）：Test-first programming 与 Systematic testing 已有独立解释证据，包括 Spec → Test → Implement、预期结果来源及测试套件 correct/thorough/small；相应局部内容为 **2. 能够解释**。未完成课程整体验收，环境验证和实验没有完成证据。
+- 旧返回流程题仍有未独立验证的问题；停用调度不等于掌握。旧题目与当时结果在 [历史题库](reviews/question-bank.md)，不再生成当前任务。
 
-| 范围 | 当前证据 |
+| 范围 | 保留证据 |
 |---|---|
-| 对象生命周期、作用域与悬空 | **2. 能够解释**，有 Day 1 证据；不外推到全部 RAII 或语言细则 |
-| 线性代数 | **1. 看过**，仅代表历史接触；已确认需要从基础重建 |
-| C++ 编程、调试、容器与 BFS | 有使用经验，自述支持局部解释能力，尚无完整独立验证 |
-| 所有权/view、移动与容器失效 | 旧诊断为 **1. 看过** 或尚未分配层级；按当前练习需要补缺 |
-| 缓存/局部性、并发与同步 | 旧诊断为 **1. 看过**；机制和正确性仍需验证 |
-| CMake、性能工具、CUDA | 旧起点保留于 Git 历史；CMake/性能工具曾接触，CUDA 未学习，均不是当前必补清单 |
-| Python 与其余数学、算法、组成、OS、网络、数据库 | Python 有既往经历，其余范围在对应入口诊断；不按缺少证据判定全部零基础 |
+| 对象生命周期、作用域与悬空 | **2. 能够解释**，限定 Day 1 已验证范围，不外推完整语言细则 |
+| 线性代数 | **1. 看过**，仅代表历史接触；仍需从基础重建 |
+| C++、Python、调试、容器/BFS | 有自述使用经验，不替代新课程作业的独立实现与验证 |
+| 缓存/局部性、并发/同步 | 旧诊断为 **1. 看过**，不视作已完成系统课 |
+| CUDA | 未学习，GPU/Toolkit/profiling 环境未核验 |
 
-旧 B1–B7 细节可从 Git 历史查阅。Day 1 文档中旧 CMake 学习日、完整 Lambda 等后续安排已失效；历史证据与当前任务分开使用。
+## 课程仓库索引
 
-## 课程仓库与交接索引
+| 课程/阶段 | 仓库与分支 | 状态入口 | 已发布成果基线 | 当前状态 |
+|---|---|---|---|---|
+| 历史 R0 / foundations | [仓库](https://github.com/W-yf/foundations)，main | [README](https://github.com/W-yf/foundations/blob/main/README.md) | ee504f6708e382110441f1de8e9c3271692ed5ee | 保留 Testing 成果；退出当前主线，未整体验收；本地接续说明已提交，待推送 |
 
-主仓库维护全局计划与必要进度，课程仓库保存知识笔记与实验。当前会话可以在已获授权范围内同步两仓库，不要求另切管理会话。
-
-| 课程/阶段 | 远程地址 | 分支 | 状态与接续入口 | 已核对课程提交 | 当前状态 |
-|---|---|---|---|---|---|
-| R0 / foundations | [仓库](https://github.com/W-yf/foundations) | `main` | [README：个人电脑接续](https://github.com/W-yf/foundations/blob/main/README.md#个人电脑接续) | `ee504f6708e382110441f1de8e9c3271692ed5ee` | Test-first programming 与测试套件三项目标达到 **2. 能够解释**；下一步学习输入分区；项目作业未启动，R0-01 环境与实验未完成 |
-
-上表课程提交于 2026-09-16 推送并核对本地 HEAD、origin/main 与远程 main 一致，包含 Test-first programming、Systematic testing 精简笔记、独立解释证据及最新接续入口。R0 主讲义采用 2022 版，旧 MITx 视频按主题配合；不学习 Java、不安排原版 Java 作业，四主题与自拟实验验收保留。当前证据不代表 R0 整体验收完成。
-
-## 换电脑接续
-
-1. 在已有的 `self-Learning` 和 `foundations` 本地仓库分别执行 `git pull --ff-only`；有未同步改动或分叉时先核对，不强制覆盖。
-2. 读取本 STATUS 和课程 README，按其中“个人电脑接续”继续。必要的阅读位置、复习要求和实验入口均在 Git 中，无需复制聊天或旧临时 handoff。
-3. 2026-09-16 本轮复习已结束；下次学习前按实际日期读取 REVIEW 与题库筛选到期卡，一次一道不同场景的具体代码题。学习日仍为 Day 2，已完成学习日仍为 1。
-4. 个人电脑先核对已有 C/C++、GDB、Python 环境；理论阅读可继续，实验完成情况另验。工具安装不随 Git 同步。
-
-## 可选分支计划
-
-用户于 2026-09-10 确认小型 Python Agent Harness 为可选分支，拟独立完成后在个人 GitHub 展示。当前状态为尚未启动，未创建项目仓库、未分配工时、无实现或验收证据；范围与验收见 [LEARNING_PLAN](LEARNING_PLAN.md#可选分支小型-python-agent-harness)。R0 完成后可评估启动时机，当前主线保持不变，Testing 按近期任务接续。计划随本轮主仓库同步发布。
+CS50x、系统、图形学和 CUDA 仓库均尚未创建，不登记虚构地址。实际启动时确认课程仓库及作业保存方式，再补索引。
 
 ## 下一学习会话
 
-主线编号现为 R0 短准备、R1 CSAPP、R2 OS、R3 离散/算法、R4 网络、R5 数据库，另有 M 基础数学支线。R0 环境初查及 Testing 理论学习已开展，其余任务按下表状态接续，不把文档更新算作学习完成。
+1. 先读本 STATUS 与当前计划，**不启动旧复习或继续旧 R0 待办**。
+2. 启动 CS50x 2026，登记课程仓库及版本；从 Week 0 课程和对应 problem set 开始，既有知识允许加快讲解，不跳过完成证据。
+3. 线代副线从向量与线性变换开始，结合教材相关原有习题，不建立额外题卡。
+4. 只配置当前作业必要工具。CSAPP/xv6/CUDA 环境留到对应阶段验证，不因本次规划重开初始化、安全检查或完整环境流程。
 
-| 近期任务 | 产出 |
-|---|---|
-| 检查到期复习 | 2026-09-16 本轮已结束；返回流程最早 2026-09-17，另两题 2026-09-19，按实际学习日和 [REVIEW](REVIEW.md) 一次一题 |
-| R0-01 最小环境与起点 | 转到个人电脑验证 C/C++、GDB 与 Python，用自拟小程序核对 C 指针/数组/结构体及分配释放；仍未完成 |
-| R0-02 规格与测试 | Test-first programming 与测试套件三项目标达到 **2. 能够解释**；下一步学习输入分区、边界与 Specifications，相关小练习验证后再进入项目作业 |
-| R0-03 抽象与实现 | 读 ADT/表示不变量，完成邻接表与边列表两种小实现，共用测试 |
-| R1-01 开始 CSAPP | R0 完成后读数据表示并启动 Data Lab，核对 btest/dlc 与第一组边界题；随后按计划进入 Bomb/Cache/Malloc |
+如果以后主动恢复 foundations，旧断点为 Testing 的 Choosing test cases by partitioning；这只是历史位置，不是当前待执行任务。
 
-准备阶段沿用原稿约 12 小时的预算基线，完成即进入 CSAPP；OS 紧随其后，完整算法课不作为 OS 开课条件。R0 以外的课内任务与验收只在 LEARNING_PLAN 维护。
+## 同步与跨电脑接续
 
-用户于 2026-09-10 再次确认原稿为底稿，明确 CSAPP/OS 优先、网络/数据库后置，并确认每周约 7 小时。5 小时主课、1 小时基础数学、1 小时复习/缓冲仍为试行分配；六阶段 552 小时保留原稿基线，新增数学、前置补缺与最终周期尚待实际校准。
+2026-11-09 两仓库均成功执行 git pull --ff-only，返回已是最新；拉取后主仓库 HEAD/origin/main 为 75ae362，课程为 ee504f6。本次新规划与停用复习调整保存为本地提交，**两仓库均未推送**，远程页面仍是旧版。foundations 已核对本地提交 a7d4ea2d0e2780650567f157de2c165828e9b34b，已发布成果基线仍如上表。
 
-本轮已核对原稿与 CS 自学指南，将 CSAPP 章节/实验对应、进入 OS 前的 I/O 和体系结构衔接、xv6 实验所需理论写入 LEARNING_PLAN；来源见 RESOURCES。没有新增整门必修课或删减既定实验。首次在 R0 结束后按实际耗时调整，规划核查不代表课程环境验证通过。
+本地 origin 仍为旧仓库名称 cuda-selfLearning 的地址，本轮拉取成功，未擅改配置。既有未跟踪 CppProperties.json 未改动，不属于学习文档或同步范围。
 
-随后按用户说明明确理论/实验分别验收，主课内两者各约一半作为试行起点。已读取所提供 Dr.Dng CSAPP 视频的简介和 23P 目录，记录按主题选集与缺口；尚未逐集试听或开始学习。视频与教材的使用分工见 RESOURCES，精选实验不缩减既定理论范围。
-
-## 同步说明
-
-2026-09-16 已先发布并核对课程仓库，提交见课程索引。本次主仓库发布范围为当日复习结果、学习小节独立描述与判断规则、Test-first programming 和 Systematic testing 证据、复习题卡及下一阅读位置；实验状态未改变。
-
-主仓库的本次完整版本以最新提交为准，避免在文件内记录它自身尚未生成的哈希。发布后核对 `git rev-parse HEAD`、`git rev-parse origin/main` 与 `git ls-remote origin refs/heads/main` 一致；同样核对课程仓库。`previous_verified_main_commit` 只标记此次发布前的基线。
-
-主仓库既有未跟踪本机配置不属于学习资料，不纳入同步，也不是另一台电脑接续的依赖。旧临时开课快照已过时；当前交接依据为本 STATUS 与课程 README。历史发布记录见 [日志](logs/2026-09-10.md)。
+用户已授权并完成本轮两仓库的本地提交；未执行推送，换电脑前仍需发布。默认接续依赖主仓库 STATUS 和课程 README，不依赖聊天或临时 handoff。文件完整内容与 Git 对象已逐一核对，异常工作区 diff 的原因与处理见 logs/2026-11-09.md。
