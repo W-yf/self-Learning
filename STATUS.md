@@ -10,7 +10,6 @@ current_stage: stage_1_cs50x_linear_algebra
 current_stage_status: planned_not_started
 plan_revision: graphics_cuda_course_exercises
 scope_confirmed: 2026-11-09
-review_schedule: disabled
 repository_role: learning_overview
 course_repository_strategy: single_repository_course_directories
 weekly_hours_stage_1: 7
@@ -18,8 +17,9 @@ weekly_hours_stage_2: 9-11
 weekly_hours_stage_2_confirmed: 2026-11-09
 weekly_hours_stage_3_proposed: 6-8
 next_task: start_cs50x_week_0_and_create_course_directory
-sync_status: local_commits_push_blocked_auth
-legacy_repository_deletion: deferred_until_migration_published
+sync_status: migration_published_cleanup_update
+legacy_repository_deletion: manual_github_deletion_required
+legacy_local_directory: empty_directory_in_use
 foundations_import_commit: a7d4ea2d0e2780650567f157de2c165828e9b34b
 repository_url: https://github.com/W-yf/self-Learning
 remote_pulled_at: 2026-11-09
@@ -28,7 +28,6 @@ published_main_baseline: 75ae3622d079c591b173c42e266f05d3de02532a
 
 ## 本次调整
 
-- 用户取消独立复习排程，改用课程或书籍布置的习题、作业和实验检验成果；不再学前抽题、不更新间隔、不追加独立口述考试。
 - 当前路线：CS50x/线代 → CSAPP/OSTEP 与 CPU 图形学 → PMPP/CUDA 与 CAM。第 2 阶段周投入 **9–11 小时已确认**；其余投入和阶段估时见计划。
 - 旧 R0 不再作为主线前置；新路线尚未开课、未创建 CS50x 课程目录。本文更新不推进学习日或掌握层级，不表示任何旧任务已经完成。
 
@@ -36,7 +35,6 @@ published_main_baseline: 75ae3622d079c591b173c42e266f05d3de02532a
 
 - Day 1（2026-08-12）：安全路径经 MSVC 编译运行，退出码 0；有新字符串 Lambda 场景的独立迁移解释。保留 [笔记](notes/day-01-lifetime.md) 与 [练习](exercises/day-01-lifetime/README.md)。
 - foundations（2026-09-16）：Test-first programming 与 Systematic testing 已有独立解释证据，包括 Spec → Test → Implement、预期结果来源及测试套件 correct/thorough/small；相应局部内容为 **2. 能够解释**。未完成课程整体验收，环境验证和实验没有完成证据。
-- 旧返回流程题仍有未独立验证的问题；停用调度不等于掌握。旧题目与当时结果在 [历史题库](reviews/question-bank.md)，不再生成当前任务。
 
 | 范围 | 保留证据 |
 |---|---|
@@ -56,17 +54,17 @@ foundations 的已跟踪文件与原提交历史已整体迁入本仓库；来�
 
 ## 下一学习会话
 
-1. 先读本 STATUS 与当前计划，**不启动旧复习或继续旧 R0 待办**。
+1. 先读本 STATUS 与当前计划。
 2. 启动 CS50x 2026，创建 courses/cs50x/ 课程目录并登记版本；从 Week 0 课程和对应 problem set 开始，既有知识允许加快讲解，不跳过完成证据。
-3. 线代副线从向量与线性变换开始，结合教材相关原有习题，不建立额外题卡。
+3. 线代副线从向量与线性变换开始，结合教材相关原有习题。
 4. 只配置当前作业必要工具。CSAPP/xv6/CUDA 环境留到对应阶段验证，不因本次规划重开初始化、安全检查或完整环境流程。
 
 如果以后主动恢复 foundations，旧断点为 Testing 的 Choosing test cases by partitioning；这只是历史位置，不是当前待执行任务。
 
 ## 同步与跨电脑接续
 
-日常只拉取、提交与推送 self-Learning；先读本 STATUS，再读课程 README，学后在同一提交中更新成果与必要进度。旧双仓发布流程已取消。
+日常只拉取、提交与推送 self-Learning；先读本 STATUS，再读课程 README，学后在同一提交中更新成果与必要进度。
 
-2026-11-09 已完成本地迁移提交 6fb5a8a309663623f59e1620f81a2f0d72c12e6e，包含课程文件和完整原历史。完整内容与相对链接核对通过，但普通地址和规范地址的推送都因 GitHub 命令行认证不可用而失败，远程仍为旧版；目前不要删除旧远程仓库或本地副本。需在已登录 GitHub 的本机终端推送 self-Learning/main，并核对远程提交后，再手动删除旧仓库。详情见 [当日日志](logs/2026-11-09.md)。
+2026-11-09 用户已成功推送，已核对本地 HEAD、origin/main 与远程 main 均为 f8ec11b47bc1658cc803b10d81ae4e6ca190e90f，包含迁移提交 6fb5a8a 和全部课程历史。旧本地仓库文件已清理，仅剩被进程占用的空目录；旧 GitHub 仓库可手动删除。文档简化与清理结果随本次维护提交同步，详情见 [当日日志](logs/2026-11-09.md)。
 
 现有 origin 使用旧名称 cuda-selfLearning 地址，可访问同一主仓库，本轮不修改远程配置。既有未跟踪 CppProperties.json 未改动、不提交。文件长度元数据异常仍用完整字节流与 Git 对象比对规避，不据工作区 diff 的假截断覆盖历史文件。

@@ -10,7 +10,7 @@
 |---|---|
 | [Testing 笔记](notes/testing.md) | 已记录测试的作用/边界、Test-first programming、Systematic testing |
 | [schedule 导读 01](lessons/0001-schedule-registration.html) · [术语速查](reference/schedule-basics.html) | 备用 AI 教学材料；未开始阅读或项目作业 |
-| [环境与学习记录](logs/2026-09-10.md) | 历史记录；其中的复习及双仓接续要求已失效 |
+| [环境与学习记录](logs/2026-09-10.md) | 历史环境与学习记录 |
 
 截至 2026-09-16，Test-first 与测试套件 correct/thorough/small 有独立解释证据，相关局部内容达到 **2. 能够解释**。C/C++ 编译运行、GDB、Python 测试与项目实验尚无完成证据，未完成 R0 整体验收。迁移不增加学习日或掌握层级。
 
@@ -29,6 +29,6 @@
 ## 接续与维护
 
 - 日常只在 self-Learning 根目录拉取、提交和推送，先读总 STATUS；本目录没有独立 Git 仓库或另一份总进度。
-- 当前按新主线启动 CS50x，不自动恢复 R0 或旧复习队列。若用户明确恢复本主题，阅读断点为 Testing 的 Choosing test cases by partitioning；环境按实际任务核验。
-- 笔记仅保存知识和个人理解，区分独立产出与 AI 帮助；小节结束整理，不保留问答流水。不另设复习排程或强制口述考试。
+- 当前按新主线启动 CS50x。若用户明确恢复本主题，阅读断点为 Testing 的 Choosing test cases by partitioning；环境按实际任务核验。
+- 笔记仅保存知识和个人理解，区分独立产出与 AI 帮助；小节结束整理，不保留问答流水。
 - 教学页面的相对链接和本地资源随目录整体保留；页面准备不等于用户已阅读或完成实验。
