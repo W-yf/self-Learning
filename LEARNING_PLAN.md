@@ -86,8 +86,8 @@ thread 包含用户级上下文切换及 pthread 同步练习；CPU 上下文切
 
 验收为 CPU/GPU 正确性对照、误差界定、可复现测量及优化结论，不预设加速倍数。非公开工作代码/数据不进入学习仓库；O'Rourke 的 Computational Geometry in C 按需参考。
 
-## 仓库与旧路线
+## 课程目录与旧路线
 
-主仓库保存总计划、必要进度和资源；实际开课时登记独立课程仓库、版本及状态入口。目前仅 foundations 已创建，见 [STATUS](STATUS.md)，CS50x 等计划课程尚未启动。
+本仓库统一保存总计划、总进度、资源和课程成果；课程按 `courses/<course>/` 管理，在根目录 [STATUS](STATUS.md) 登记版本、成果入口与下一步，不另建课程 STATUS。[foundations](courses/foundations/README.md) 已有成果保留；CS50x 等计划课程尚未启动，目录按需创建。学前只拉取本仓库，学后一并整理成果与总进度，一次提交同步。独立项目或需隔离的受限作业才另设仓库。
 
 旧 foundations R0 停止作为主线前置，保留 Testing 笔记与未完成状态。完整离散/算法、网络、数据库、CS149、Go/分布式与 Agent Harness 不纳入当前必修或预算；需要时再选择，不恢复旧排期。原路线和资源细节从 Git 历史查询。

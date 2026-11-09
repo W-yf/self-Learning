@@ -50,6 +50,6 @@ PMPP 相关 Applied Parallel Programming / Heterogeneous Parallel Programming �
 
 ## 历史成果与资料边界
 
-[foundations](https://github.com/W-yf/foundations) 保留旧 R0 Testing 笔记和来源；其课程范围已退出当前主线。旧离散/算法、网络、数据库及其他候选资源可从 Git 历史查询，不作为待补清单。
+[foundations](courses/foundations/README.md) 保留旧 R0 Testing 笔记和来源；其课程范围已退出当前主线。课程资料和成果统一放在本仓库的 `courses/<course>/`，总进度见 [STATUS](STATUS.md)；CS50x 目录待实际启动时创建。独立项目或需隔离的受限作业才另设仓库。旧离散/算法、网络、数据库及其他候选资源可从 Git 历史查询，不作为待补清单。
 
 课程资料可阅读不等于可公开复制或公布答案。使用实验时按当前课程规则处理框架、测试和解答；公开仓库只保存允许公开的内容，不复制公司代码或客户数据。CAM 收束采用独立实现和合成数据。

@@ -1,6 +1,6 @@
 # 当前状态
 
-本文件维护总进度、已有证据、课程仓库索引和接续入口。详细范围见 [学习计划](LEARNING_PLAN.md)，资料见 [RESOURCES](RESOURCES.md)。
+本文件维护总进度、已有证据、课程目录索引和接续入口。详细范围见 [学习计划](LEARNING_PLAN.md)，资料见 [RESOURCES](RESOURCES.md)。
 
 ```yaml
 last_updated: 2026-11-09
@@ -12,14 +12,15 @@ plan_revision: graphics_cuda_course_exercises
 scope_confirmed: 2026-11-09
 review_schedule: disabled
 repository_role: learning_overview
-course_repository_strategy: separate_per_course_or_stage
+course_repository_strategy: single_repository_course_directories
 weekly_hours_stage_1: 7
 weekly_hours_stage_2: 9-11
 weekly_hours_stage_2_confirmed: 2026-11-09
 weekly_hours_stage_3_proposed: 6-8
-next_task: start_cs50x_week_0_and_register_course_repository
-sync_status: local_commit_pending_push
-course_repository_sync_status: foundations_committed_pending_push
+next_task: start_cs50x_week_0_and_create_course_directory
+sync_status: migration_pending_publish
+legacy_repository_deletion: manual_github_deletion_required
+foundations_import_commit: a7d4ea2d0e2780650567f157de2c165828e9b34b
 repository_url: https://github.com/W-yf/self-Learning
 remote_pulled_at: 2026-11-09
 published_main_baseline: 75ae3622d079c591b173c42e266f05d3de02532a
@@ -29,7 +30,7 @@ published_main_baseline: 75ae3622d079c591b173c42e266f05d3de02532a
 
 - 用户取消独立复习排程，改用课程或书籍布置的习题、作业和实验检验成果；不再学前抽题、不更新间隔、不追加独立口述考试。
 - 当前路线：CS50x/线代 → CSAPP/OSTEP 与 CPU 图形学 → PMPP/CUDA 与 CAM。第 2 阶段周投入 **9–11 小时已确认**；其余投入和阶段估时见计划。
-- 旧 R0 不再作为主线前置；新路线尚未开课、未创建新课程仓库。本文更新不推进学习日或掌握层级，不表示任何旧任务已经完成。
+- 旧 R0 不再作为主线前置；新路线尚未开课、未创建 CS50x 课程目录。本文更新不推进学习日或掌握层级，不表示任何旧任务已经完成。
 
 ## 已有成果与起点
 
@@ -45,18 +46,18 @@ published_main_baseline: 75ae3622d079c591b173c42e266f05d3de02532a
 | 缓存/局部性、并发/同步 | 旧诊断为 **1. 看过**，不视作已完成系统课 |
 | CUDA | 未学习，GPU/Toolkit/profiling 环境未核验 |
 
-## 课程仓库索引
+## 课程目录索引
 
-| 课程/阶段 | 仓库与分支 | 状态入口 | 已发布成果基线 | 当前状态 |
-|---|---|---|---|---|
-| 历史 R0 / foundations | [仓库](https://github.com/W-yf/foundations)，main | [README](https://github.com/W-yf/foundations/blob/main/README.md) | ee504f6708e382110441f1de8e9c3271692ed5ee | 保留 Testing 成果；退出当前主线，未整体验收；本地接续说明已提交，待推送 |
+| 课程/阶段 | 入口 | 当前证据与状态 |
+|---|---|---|
+| 历史 R0 / foundations | [课程 README](courses/foundations/README.md) · [Testing 笔记](courses/foundations/notes/testing.md) | 保留独立解释证据；退出当前主线，实验和整体验收未完成 |
 
-CS50x、系统、图形学和 CUDA 仓库均尚未创建，不登记虚构地址。实际启动时确认课程仓库及作业保存方式，再补索引。
+foundations 的已跟踪文件与原提交历史已整体迁入本仓库；来源提交为 a7d4ea2d0e2780650567f157de2c165828e9b34b。CS50x 等课程在实际启动时创建 courses/<course>/ 目录，登记版本、成果入口和下一步；独立项目或受限作业才另设仓库。
 
 ## 下一学习会话
 
 1. 先读本 STATUS 与当前计划，**不启动旧复习或继续旧 R0 待办**。
-2. 启动 CS50x 2026，登记课程仓库及版本；从 Week 0 课程和对应 problem set 开始，既有知识允许加快讲解，不跳过完成证据。
+2. 启动 CS50x 2026，创建 courses/cs50x/ 课程目录并登记版本；从 Week 0 课程和对应 problem set 开始，既有知识允许加快讲解，不跳过完成证据。
 3. 线代副线从向量与线性变换开始，结合教材相关原有习题，不建立额外题卡。
 4. 只配置当前作业必要工具。CSAPP/xv6/CUDA 环境留到对应阶段验证，不因本次规划重开初始化、安全检查或完整环境流程。
 
@@ -64,8 +65,8 @@ CS50x、系统、图形学和 CUDA 仓库均尚未创建，不登记虚构地址
 
 ## 同步与跨电脑接续
 
-2026-11-09 两仓库均成功执行 git pull --ff-only，返回已是最新；拉取后主仓库 HEAD/origin/main 为 75ae362，课程为 ee504f6。本次新规划与停用复习调整保存为本地提交，**两仓库均未推送**，远程页面仍是旧版。foundations 已核对本地提交 a7d4ea2d0e2780650567f157de2c165828e9b34b，已发布成果基线仍如上表。
+日常只拉取、提交与推送 self-Learning；先读本 STATUS，再读课程 README，学后在同一提交中更新成果与必要进度。旧双仓发布流程已取消。
 
-本地 origin 仍为旧仓库名称 cuda-selfLearning 的地址，本轮拉取成功，未擅改配置。既有未跟踪 CppProperties.json 未改动，不属于学习文档或同步范围。
+2026-11-09 用户授权合并 foundations 并在迁移验证后删除旧仓库。本轮迁移包含尚未推送的课程提交及完整原历史；先核对迁入文件、相对链接与 Git 对象，再提交并推送主仓库，最后处理旧仓库。发布及旧仓库处置结果见 [当日日志](logs/2026-11-09.md)。
 
-用户已授权并完成本轮两仓库的本地提交；未执行推送，换电脑前仍需发布。默认接续依赖主仓库 STATUS 和课程 README，不依赖聊天或临时 handoff。文件完整内容与 Git 对象已逐一核对，异常工作区 diff 的原因与处理见 logs/2026-11-09.md。
+现有 origin 使用旧名称 cuda-selfLearning 地址，可访问同一主仓库，本轮不修改远程配置。既有未跟踪 CppProperties.json 未改动、不提交。文件长度元数据异常仍用完整字节流与 Git 对象比对规避，不据工作区 diff 的假截断覆盖历史文件。
