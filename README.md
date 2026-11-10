@@ -19,7 +19,7 @@
 | [学习资源](RESOURCES.md) | 教材、官方课程与练习入口 |
 | [协作规则](AGENTS.md) | 读取顺序、证据、公开边界与 Git 规则 |
 
-已有 [Day 1 笔记](notes/day-01-lifetime.md)、[练习](exercises/day-01-lifetime/README.md) 和 [foundations](courses/foundations/README.md) 的 Testing 成果保留。后续从 CS50x 的 C 相关原题按实际缺口接续，已有能力用对应练习验证，不默认重新完整修课。
+从 CS50x 的 C 相关原题按实际缺口接续，已有能力用对应练习验证，不默认重新完整修课。
 
 换电脑或会话时，只拉取本仓库，再读 STATUS 与课程 README；学后一并整理成果与总进度，一次提交同步。本地未发布的调整会明确标记。当前新路线尚未开课，CS50x 目录按需启动时创建，启动入口见 STATUS。
 
