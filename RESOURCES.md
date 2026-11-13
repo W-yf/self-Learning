@@ -49,12 +49,22 @@ CS50x 的年份入口本次重定向到官方当前页面；正式开课以当�
 
 研究顺序与成果要求见 LEARNING_PLAN：基础接口与对象语义 → B-rep 数据模型 → 算法诊断与源码 → 专题研究。示例使用独立合成模型；FreeCAD 作为上层集成对照，libigl 作为网格处理对照。
 
+### CAM 工艺与五轴接口
+
+| 资源 | 选读范围与用途 |
+|---|---|
+| 天津大学《机械制造技术基础》 | CAM 工艺入门首选。选看 1.3–1.4、2.2–2.4、5.2–5.5，对应工艺过程、装夹定位、工艺路线、余量与公差，使用相关章节原有习题。[课程大纲](https://www.icourse163.org/course/detail.htm?cid=1003482003) |
+| 王隆太主编《机械 CAD/CAM 技术》第 5 版 | 选读 7.3 刀位点计算和 7.4.2 刀具轨迹生成，结合例题理解设计几何、刀位与路径之间的关系。[出版社目录](https://www.cmpedu.com/books/book/5606280.htm) |
+| LinuxCNC 五轴运动学文档 | 遇到轴名、坐标系或 RTCP 问题时，选一种具体机床构型，对照图示理解工件位姿与机床轴运动的关系。实际接口定义以对应设备和系统文档为准。[五轴运动学文档](https://linuxcnc.org/docs/stable/html/motion/5-axis-kinematics.html) |
+
 ## 细分探索：图形学
 
 - [3Blue1Brown 线代](https://www.3blue1brown.com/topics/linear-algebra)：几何直觉，配合虎书原有计算练习；也可用于理解 OCCT 中的坐标与变换。
 - [GAMES101 官方课程主页](https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html)：第 2 讲线代，第 3/4 讲变换，第 5/6 讲光栅化；页面有讲义与视频入口。官方先修涉及线代、微积分、算法和数据结构，本计划按选学内容补缺，不宣称只看线代视频就满足整课前置。
 - 官方作业入口：[作业 0](https://games-cn.org/forums/topic/graphics-intro-hw0/) · [作业 1](https://games-cn.org/forums/topic/graphics-intro-hw1/) · [作业 2](https://games-cn.org/forums/topic/graphics-intro-hw2/)。[作业 0 说明](https://games-cn.org/wp-content/uploads/2023/10/pa0.pdf) 涉及 C++、Eigen、CMake 及齐次变换。已核对发布入口，未运行或完整审阅压缩包内的实现和测试。
 - Fundamentals of Computer Graphics，第 4 版（虎书）：对应数学、变换、光栅化章节及习题。先完成原作业，再按实际需要扩展；不额外重写另一套光栅器。
+
+- GAMES102《几何建模与处理》为几何方向进阶选修。OCCT 实践中反复遇到曲线曲面表示、逼近或网格处理问题时，选对应讲次和原有作业系统补强。[课程主页](https://games-cn.org/games102/)
 
 ## 细分探索：CUDA 与高性能计算
 
