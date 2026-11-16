@@ -52,4 +52,6 @@ remote_fetched_at: 2026-11-16
 
 2026-11-16 更新前已获取远程引用，核对本地 main 与 origin/main 一致。每次提交和推送后仍需按 README 核对 HEAD、origin/main 与远程 main；发布结果以 Git 为准，不把审核通过等同于已推送。
 
+本轮四份文档已完成检查并在本地提交；2026-11-16 推送因本机 Git 无法取得 GitHub HTTPS 凭据而失败，尚未发布。待本机认证恢复后执行 `git push origin main`，核对 HEAD、origin/main 与远程 main，再清除此待同步事项。当前远程仍是本轮更新前的版本。
+
 既有未跟踪 `CppProperties.json` 为本地文件，本次保留且不纳入提交。换电脑后按实际 Git 状态检查未同步事项。
