@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2050" viewBox="0 0 1600 2050"><title>学习路线与计划学时</title><desc>计算机基础与C++为共同核心；数学系统推进；OCCT、Qt、图形学与CUDA按局部先修轮换，选修单列。无公司项目代码。</desc><style>text{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif}</style><defs><marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0 L9 3.5 L0 7 Z" fill="#64748b"/></marker></defs>
+<rect x="0" y="0" width="1600" height="2050" rx="0" fill="#f8fafc" stroke="#f8fafc"/>
+<text x="50" y="63" font-size="38" font-weight="750" fill="#0f172a">学习路线与计划学时</text>
+<text x="50" y="102" font-size="21" font-weight="400" fill="#475569">计算机基础与 C++ 为核心 · 系统数学 · OCCT / Qt / 图形学 · 提前实践 CUDA</text>
+<text x="50" y="139" font-size="18" font-weight="400" fill="#64748b">h = 计划有效学时（含原有习题与调试）  |  箭头为推荐推进顺序，局部先修满足即可进入应用</text>
+<rect x="30" y="170" width="1540" height="330" rx="16" fill="#ffffff" stroke="#d1d5db"/>
+<text x="55" y="209" font-size="25" font-weight="700" fill="#2563eb">01  共同核心 · 必修 385–585h</text>
+<text x="55" y="238" font-size="17" font-weight="400" fill="#64748b">算法整课放在操作系统之后；必要结构概念随原题补齐。线程池在同步基础后进入，无需等完整算法。</text>
+<g id="c" data-graph-role="node">
+<rect x="55" y="255" width="270" height="112" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="73" y="286" font-size="21" font-weight="650" fill="#111827">C 内存补缺</text>
+<text x="73" y="320" font-size="25" font-weight="700" fill="#2563eb">20–35h</text>
+<text x="73" y="349" font-size="17" font-weight="400" fill="#475569">CS50x 原题按缺口</text>
+</g>
+<g id="cpp" data-graph-role="node">
+<rect x="355" y="255" width="270" height="112" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="373" y="286" font-size="21" font-weight="650" fill="#111827">现代 C++</text>
+<text x="373" y="320" font-size="25" font-weight="700" fill="#2563eb">70–100h</text>
+<text x="373" y="349" font-size="17" font-weight="400" fill="#475569">CS106L / PPP3 补缺</text>
+</g>
+<g id="csapp" data-graph-role="node">
+<rect x="655" y="255" width="270" height="112" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="673" y="286" font-size="21" font-weight="650" fill="#111827">组成与系统</text>
+<text x="673" y="320" font-size="25" font-weight="700" fill="#2563eb">90–140h</text>
+<text x="673" y="349" font-size="17" font-weight="400" fill="#475569">CSAPP 第 1–9 章选深度</text>
+</g>
+<g id="os" data-graph-role="node">
+<rect x="955" y="255" width="270" height="112" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="973" y="286" font-size="21" font-weight="650" fill="#111827">操作系统</text>
+<text x="973" y="320" font-size="25" font-weight="700" fill="#2563eb">55–80h</text>
+<text x="973" y="349" font-size="17" font-weight="400" fill="#475569">OSTEP 原有作业</text>
+</g>
+<g id="ds" data-graph-role="node">
+<rect x="1255" y="255" width="270" height="112" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="1273" y="286" font-size="21" font-weight="650" fill="#111827">数据结构算法</text>
+<text x="1273" y="320" font-size="25" font-weight="700" fill="#2563eb">70–100h</text>
+<text x="1273" y="349" font-size="17" font-weight="400" fill="#475569">CS106B 原题</text>
+</g>
+<polyline id="main-0" data-graph-role="edge" points="325,311 355,311" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline id="main-1" data-graph-role="edge" points="625,311 655,311" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline id="main-2" data-graph-role="edge" points="925,311 955,311" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline id="main-3" data-graph-role="edge" points="1225,311 1255,311" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<g id="mcs" data-graph-role="node">
+<rect x="55" y="402" width="400" height="75" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="73" y="433" font-size="21" font-weight="650" fill="#111827">必要离散数学 · MCS</text>
+<text x="73" y="467" font-size="25" font-weight="700" fill="#2563eb">25–40h</text>
+</g>
+<text x="220" y="467" font-size="17" font-weight="400" fill="#475569">证明与图等</text>
+<g id="se" data-graph-role="node">
+<rect x="495" y="402" width="530" height="75" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="513" y="433" font-size="21" font-weight="650" fill="#111827">软件设计与工程基础</text>
+<text x="513" y="467" font-size="25" font-weight="700" fill="#2563eb">35–55h</text>
+</g>
+<text x="700" y="467" font-size="17" font-weight="400" fill="#475569">需求、接口与架构</text>
+<g id="pool" data-graph-role="node">
+<rect x="1075" y="402" width="450" height="75" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+<text x="1093" y="433" font-size="21" font-weight="650" fill="#111827">同步后：线程池 Part A</text>
+<text x="1093" y="467" font-size="25" font-weight="700" fill="#2563eb">20–35h</text>
+</g>
+<text x="1300" y="467" font-size="17" font-weight="400" fill="#475569">CS149 原实验</text>
+<polyline id="os-pool" data-graph-role="edge" points="1120,367 1120,385 1300,385 1300,402" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<rect x="30" y="525" width="1540" height="280" rx="16" fill="#ffffff" stroke="#d1d5db"/>
+<text x="55" y="564" font-size="25" font-weight="700" fill="#15803d">02  数学主干 · 335–505h</text>
+<text x="55" y="593" font-size="17" font-weight="400" fill="#64748b">从线性代数开始；空间几何概念可按当前应用提前查阅。图形与 CUDA 按局部先修进入。</text>
+<g id="la" data-graph-role="node">
+<rect x="55" y="620" width="270" height="155" rx="10" fill="#f0fdf4" stroke="#15803d"/>
+<text x="73" y="651" font-size="21" font-weight="650" fill="#111827">线性代数</text>
+<text x="73" y="685" font-size="25" font-weight="700" fill="#15803d">100–150h</text>
+<text x="73" y="714" font-size="17" font-weight="400" fill="#475569">MIT 18.06 完整主干</text>
+<text x="73" y="739" font-size="17" font-weight="400" fill="#475569">含 3Blue1Brown 辅助</text>
+</g>
+<g id="geo" data-graph-role="node">
+<rect x="355" y="620" width="270" height="155" rx="10" fill="#f0fdf4" stroke="#15803d"/>
+<text x="373" y="651" font-size="21" font-weight="650" fill="#111827">解析几何基础</text>
+<text x="373" y="685" font-size="25" font-weight="700" fill="#15803d">40–60h</text>
+<text x="373" y="714" font-size="17" font-weight="400" fill="#475569">向量、坐标、直线平面</text>
+<text x="373" y="739" font-size="17" font-weight="400" fill="#475569">常见二次曲面</text>
+</g>
+<g id="calc" data-graph-role="node">
+<rect x="655" y="620" width="270" height="155" rx="10" fill="#f0fdf4" stroke="#15803d"/>
+<text x="673" y="651" font-size="21" font-weight="650" fill="#111827">单变量微积分</text>
+<text x="673" y="685" font-size="25" font-weight="700" fill="#15803d">100–150h</text>
+<text x="673" y="714" font-size="17" font-weight="400" fill="#475569">MIT 18.01SC 基础</text>
+<text x="673" y="739" font-size="17" font-weight="400" fill="#475569">导数、积分、应用与级数</text>
+</g>
+<g id="multi" data-graph-role="node">
+<rect x="955" y="620" width="270" height="155" rx="10" fill="#f0fdf4" stroke="#15803d"/>
+<text x="973" y="651" font-size="21" font-weight="650" fill="#111827">必要多元微积分</text>
+<text x="973" y="685" font-size="25" font-weight="700" fill="#15803d">35–55h</text>
+<text x="973" y="714" font-size="17" font-weight="400" fill="#475569">MIT 18.02SC 选定单元</text>
+<text x="973" y="739" font-size="17" font-weight="400" fill="#475569">参数曲线、偏导、梯度</text>
+</g>
+<g id="cagd" data-graph-role="node">
+<rect x="1255" y="620" width="270" height="155" rx="10" fill="#f0fdf4" stroke="#15803d"/>
+<text x="1273" y="651" font-size="21" font-weight="650" fill="#111827">曲线曲面</text>
+<text x="1273" y="685" font-size="25" font-weight="700" fill="#15803d">60–90h</text>
+<text x="1273" y="714" font-size="17" font-weight="400" fill="#475569">Shene / Farin 参考</text>
+<text x="1273" y="739" font-size="17" font-weight="400" fill="#475569">Bézier、B-spline、NURBS</text>
+</g>
+<polyline id="math-0" data-graph-role="edge" points="325,696 355,696" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline id="math-1" data-graph-role="edge" points="625,696 655,696" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline id="math-2" data-graph-role="edge" points="925,696 955,696" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline id="math-3" data-graph-role="edge" points="1225,696 1255,696" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="830" width="1540" height="690" rx="16" fill="#ffffff" stroke="#d1d5db"/>
+<text x="55" y="869" font-size="25" font-weight="700" fill="#c2410c">03  工作基础与应用探索 · 245–395h</text>
+<text x="55" y="898" font-size="17" font-weight="400" fill="#64748b">共用理想 2h/周的应用时段；随个人事务弹性安排，以下主题分段轮换。</text>
+<g id="occt" data-graph-role="node">
+<rect x="55" y="930" width="450" height="165" rx="10" fill="#fff7ed" stroke="#c2410c"/>
+<text x="73" y="961" font-size="21" font-weight="650" fill="#111827">OCCT：全貌 → 数据模型 → 专题</text>
+<text x="73" y="995" font-size="25" font-weight="700" fill="#c2410c">75–115h</text>
+<text x="73" y="1024" font-size="17" font-weight="400" fill="#475569">包含通识 12–20h，不重复相加</text>
+<text x="73" y="1049" font-size="17" font-weight="400" fill="#475569">工作版本 7.9.x；官方 Bottle / 文档</text>
+<text x="73" y="1074" font-size="17" font-weight="400" fill="#475569">起步即可认识全貌，实践随 C++ 深入</text>
+</g>
+<g id="qt" data-graph-role="node">
+<rect x="565" y="930" width="450" height="165" rx="10" fill="#fff7ed" stroke="#c2410c"/>
+<text x="583" y="961" font-size="21" font-weight="650" fill="#111827">Qt：最小可视化实践</text>
+<text x="583" y="995" font-size="25" font-weight="700" fill="#c2410c">20–35h</text>
+<text x="583" y="1024" font-size="17" font-weight="400" fill="#475569">Widgets、事件、信号槽、集成示例</text>
+<text x="583" y="1049" font-size="17" font-weight="400" fill="#475569">先修：基本 C++ 与生命周期</text>
+<text x="583" y="1074" font-size="17" font-weight="400" fill="#475569">用于观察变换、曲线曲面与拓扑</text>
+</g>
+<g id="cam" data-graph-role="node">
+<rect x="1075" y="930" width="450" height="165" rx="10" fill="#fff7ed" stroke="#c2410c"/>
+<text x="1093" y="961" font-size="21" font-weight="650" fill="#111827">CAM：概念随工作任务持续补齐</text>
+<text x="1093" y="995" font-size="25" font-weight="700" fill="#c2410c">20–35h</text>
+<text x="1093" y="1024" font-size="17" font-weight="400" fill="#475569">工艺、基准、公差、补偿与路径</text>
+<text x="1093" y="1049" font-size="17" font-weight="400" fill="#475569">使用教材原题及实际设备约定</text>
+<text x="1093" y="1074" font-size="17" font-weight="400" fill="#475569">不作为 CUDA 的先修</text>
+</g>
+<polyline id="occt-qt" data-graph-role="edge" points="505,1008 565,1008" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<text x="55" y="1142" font-size="18" font-weight="400" fill="#475569">默认在 GAMES101 作业 0–2 后切入 CUDA A；若其数学先修尚未具备，而 C++ 条件已满足，可先进入 CUDA。</text>
+<g id="gfx" data-graph-role="node">
+<rect x="55" y="1190" width="450" height="180" rx="10" fill="#faf5ff" stroke="#7e22ce"/>
+<text x="73" y="1221" font-size="21" font-weight="650" fill="#111827">图形学 + OpenGL</text>
+<text x="73" y="1255" font-size="25" font-weight="700" fill="#7e22ce">90–140h</text>
+<text x="73" y="1284" font-size="17" font-weight="400" fill="#475569">先 GAMES101 原作业 0–2</text>
+<text x="73" y="1309" font-size="17" font-weight="400" fill="#475569">后作业 3 基础 + LearnOpenGL</text>
+<text x="73" y="1334" font-size="17" font-weight="400" fill="#475569">两段合计；先修：C++、向量和变换</text>
+</g>
+<g id="cuda-a" data-graph-role="node">
+<rect x="565" y="1190" width="290" height="180" rx="10" fill="#f0fdfa" stroke="#0f766e"/>
+<text x="583" y="1221" font-size="21" font-weight="650" fill="#111827">CUDA A：执行模型</text>
+<text x="583" y="1255" font-size="25" font-weight="700" fill="#0f766e">12–20h</text>
+<text x="583" y="1284" font-size="17" font-weight="400" fill="#475569">HW1：向量加法 / naive GEMM</text>
+<text x="583" y="1309" font-size="17" font-weight="400" fill="#475569">先修：数组、指针、编译调试</text>
+<text x="583" y="1334" font-size="17" font-weight="400" fill="#475569">GEMM 只需矩乘定义</text>
+</g>
+<g id="cuda-b" data-graph-role="node">
+<rect x="905" y="1190" width="290" height="180" rx="10" fill="#f0fdfa" stroke="#0f766e"/>
+<text x="923" y="1221" font-size="21" font-weight="650" fill="#111827">CUDA B：协作与复用</text>
+<text x="923" y="1255" font-size="25" font-weight="700" fill="#0f766e">18–30h</text>
+<text x="923" y="1284" font-size="17" font-weight="400" fill="#475569">HW2 tiled GEMM / HW5 归约</text>
+<text x="923" y="1309" font-size="17" font-weight="400" fill="#475569">先修：A；补共享内存与同步</text>
+<text x="923" y="1334" font-size="17" font-weight="400" fill="#475569">不要求先做线程池</text>
+</g>
+<g id="cuda-c" data-graph-role="node">
+<rect x="1245" y="1190" width="290" height="180" rx="10" fill="#f0fdfa" stroke="#0f766e"/>
+<text x="1263" y="1221" font-size="21" font-weight="650" fill="#111827">CUDA C：分析与优化</text>
+<text x="1263" y="1255" font-size="25" font-weight="700" fill="#0f766e">10–20h</text>
+<text x="1263" y="1284" font-size="17" font-weight="400" fill="#475569">HW3 profiling / 原实验比较</text>
+<text x="1263" y="1309" font-size="17" font-weight="400" fill="#475569">先修：A/B、局部性和计时</text>
+<text x="1263" y="1334" font-size="17" font-weight="400" fill="#475569">结合 CSAPP 对应主题</text>
+</g>
+<polyline id="gfx-cuda" data-graph-role="edge" points="505,1270 565,1270" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<polyline id="cuda-ab" data-graph-role="edge" points="855,1270 905,1270" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline id="cuda-bc" data-graph-role="edge" points="1195,1270 1245,1270" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="55" y="1420" font-size="20" font-weight="650" fill="#0f766e">CUDA 第一轮合计 40–70h · C++ 与 CPU 参考实现具备即可启动 A；依据阶段成果推进 B/C。</text>
+<text x="55" y="1458" font-size="18" font-weight="400" fill="#475569">不以完整数学、Qt、OCCT、CSAPP、OSTEP 或线程池为 CUDA A 的前置；工具与硬件在启动时核验。</text>
+<text x="55" y="1490" font-size="17" font-weight="400" fill="#64748b">数学观察与图形实践满足局部先修即可进入；理论习题不要求全部写成可视化程序。</text>
+<rect x="30" y="1545" width="1540" height="285" rx="16" fill="#ffffff" stroke="#d1d5db"/>
+<text x="55" y="1584" font-size="25" font-weight="700" fill="#7e22ce">04  后续分支 · 选修，另计时间</text>
+<text x="55" y="1613" font-size="17" font-weight="400" fill="#64748b">不占用 CUDA 第一轮既定预算；选择一个深入分支，其余保留为候选。</text>
+<g id="dag" data-graph-role="node">
+<rect x="55" y="1640" width="345" height="155" rx="10" fill="#faf5ff" stroke="#7e22ce"/>
+<text x="73" y="1671" font-size="21" font-weight="650" fill="#111827">任务图与调度</text>
+<text x="73" y="1705" font-size="25" font-weight="700" fill="#7e22ce">23–42h</text>
+<text x="73" y="1734" font-size="17" font-weight="400" fill="#475569">CS149 Part B：15–30h</text>
+<text x="73" y="1759" font-size="17" font-weight="400" fill="#475569">Taskflow 选读：8–12h</text>
+<text x="73" y="1784" font-size="17" font-weight="400" fill="#475569">先修：Part A、图与依赖</text>
+</g>
+<g id="coro" data-graph-role="node">
+<rect x="435" y="1640" width="345" height="155" rx="10" fill="#faf5ff" stroke="#7e22ce"/>
+<text x="453" y="1671" font-size="21" font-weight="650" fill="#111827">C++20 协程</text>
+<text x="453" y="1705" font-size="25" font-weight="700" fill="#7e22ce">15–25h</text>
+<text x="453" y="1734" font-size="17" font-weight="400" fill="#475569">作者教程 / generator</text>
+<text x="453" y="1759" font-size="17" font-weight="400" fill="#475569">先修：RAII、移动、模板</text>
+<text x="453" y="1784" font-size="17" font-weight="400" fill="#475569">异常与生命周期</text>
+</g>
+<g id="spsc" data-graph-role="node">
+<rect x="815" y="1640" width="345" height="155" rx="10" fill="#faf5ff" stroke="#7e22ce"/>
+<text x="833" y="1671" font-size="21" font-weight="650" fill="#111827">SPSC 无锁队列</text>
+<text x="833" y="1705" font-size="25" font-weight="700" fill="#7e22ce">20–35h</text>
+<text x="833" y="1734" font-size="17" font-weight="400" fill="#475569">成熟库源码与原测试</text>
+<text x="833" y="1759" font-size="17" font-weight="400" fill="#475569">先修：同步、原子内存模型</text>
+<text x="833" y="1784" font-size="17" font-weight="400" fill="#475569">acquire/release；不扩 MPMC</text>
+</g>
+<g id="advanced" data-graph-role="node">
+<rect x="1195" y="1640" width="340" height="155" rx="10" fill="#f9fafb" stroke="#4b5563"/>
+<text x="1213" y="1671" font-size="21" font-weight="650" fill="#111827">方向深化</text>
+<text x="1213" y="1705" font-size="25" font-weight="700" fill="#4b5563">另行定范围与估时</text>
+<text x="1213" y="1734" font-size="17" font-weight="400" fill="#475569">图形系统 / HPC / 算子开发</text>
+<text x="1213" y="1759" font-size="17" font-weight="400" fill="#475569">CPU 多核、SIMD、GPU 架构</text>
+<text x="1213" y="1784" font-size="17" font-weight="400" fill="#475569">量化仅为候选应用</text>
+</g>
+<rect x="30" y="1855" width="1540" height="165" rx="16" fill="#0f172a" stroke="#0f172a"/>
+<text x="55" y="1898" font-size="30" font-weight="700" fill="#ffffff">本版总计 965–1485h  ·  按先修与阶段成果推进</text>
+<text x="55" y="1940" font-size="21" font-weight="400" fill="#e2e8f0">理想投入：核心 3h + 数学 2h + 应用 2h = 7h/周</text>
+<text x="55" y="1975" font-size="21" font-weight="400" fill="#e2e8f0">学时用于估计范围；每日、每周可变，不补欠时、不设固定完成月份。含 CUDA，选修另计。</text>
+<text x="55" y="2005" font-size="17" font-weight="400" fill="#cbd5e1">实线：推荐推进顺序    虚线：分支衔接 / 观察支撑 / 应用轮换    局部先修见节点，学时为规划估计</text>
+</svg>
