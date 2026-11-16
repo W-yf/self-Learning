@@ -1,143 +1,97 @@
 # 学习资源
 
-当前范围以已确认的 [LEARNING_PLAN](LEARNING_PLAN.md) 为准。每个主题选一套主要讲解，书籍/官方文档用于查证和习题；不因列出资源而增加必修课程。2026-11-09 核查课程入口、下列招聘证据及 GitHub 项目；未下载实验包、运行样例或核验本机学习环境。
+范围与顺序以 [LEARNING_PLAN](LEARNING_PLAN.md) 为准，总进度见 [STATUS](STATUS.md)。每个主题选一套主要讲解，配合原有习题、作业和官方文档；列出资料不等于增加必修课，也不代表已经学习。2026-11-16 按已确认计划整理；历史岗位证据保留原核查日期，不作为当前招聘状态。
 
-## 最小核心：编程启动
+## 共同核心：编程、算法与系统
 
-规划主要依据 [CS 自学指南学习规划](https://csdiy.wiki/CS学习规划/) 与 [Teach Yourself CS 中文版](https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md)，本轮已核对原文。前者用于课程地图和先修选择，后者用于学科联系与系统基础取舍；下列范围是本计划的选择，不是两份指南共同规定的必修组合。
-
-| 资源 | 用法 |
+| 主资源 | 使用范围 |
 |---|---|
-| [CS50x 2026](https://cs50.harvard.edu/x/2026/) · [大纲](https://cs50.harvard.edu/x/2026/syllabus/) | 按 Week 1–5 的 C 相关原题补缺，Week 0 作背景；已有能力通过练习确认。Python 服务算法与脚本，SQL/Web/final project 按完整修课意愿续学，部分完成不等于整课完成 |
-| C Programming: A Modern Approach，K. N. King | C 问题的文字参考，不通读，不要求购买 |
-| Crash Course Computer Science | 可选科普，不是开课前置 |
+| [CS50x 2026](https://cs50.harvard.edu/x/2026/) · [大纲](https://cs50.harvard.edu/x/2026/syllabus/) | Week 1–5 的 C 相关原题补缺；已有能力通过练习确认。选学这些周不等于完成整课 |
+| [CS106L Spring 2025](https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1256/) | 现代 C++：类型与引用、容器、泛型、类、特殊成员、移动、RAII 和智能指针，配套原有作业 |
+| [Programming: Principles and Practice Using C++，第 3 版](https://www.stroustrup.com/programming.html) | 补 CS106L 所需的函数、类等语言缺口，按需选原题；不额外完整修读或另学整套 GUI |
+| [CS106B Spring 2025](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1256/) · [讲次索引](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1256/lecture_index) | 数据结构与基础算法主来源：递归、容器、树、堆、哈希、图与路径算法；使用该学期框架，区分 Stanford 教学库与 STL |
+| [MIT 6.042J / Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/) | 随算法选逻辑、证明、归纳、不变量、图、计数与基本概率的章节和原题 |
+| [CSAPP 第 3 版官方站点](https://csapp.cs.cmu.edu/3e/) | 第 1–9 章选章：系统概览、表示、机器程序、执行与优化、存储层次、链接、进程及虚拟内存；具体深度见计划 |
+| [CMU 15-213 Spring 2025 课表](https://www.cs.cmu.edu/afs/cs/academic/class/15213-s25/www/schedule.html) · [自学实验](https://csapp.cs.cmu.edu/3e/labs.html) | 对应讲义、代码和工具导读；Cache Lab 按需使用允许自学的 Self-Study Handout，遵守公开边界 |
+| [OSTEP 作者官网](https://pages.cs.wisc.edu/~remzi/OSTEP/) | 虚拟化、并发、持久化选章及对应习题/模拟器；覆盖文件、I/O、缓存与崩溃恢复的基本问题 |
 
-CS50x 的年份入口本次重定向到官方当前页面；正式开课以当时题目和工具命令为准，跨年先查官方衔接政策。采用课程提供的检查反馈，不代填完成记录或生成作业答案。公开记录只保存可公开的笔记、进度与独立练习；作业提交及展示遵循课程规则。
+查阅材料：[C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) 用于资源管理和接口判断；[Compiler Explorer](https://godbolt.org/) 用于观察编译结果；[Missing Semester 调试与性能分析](https://missing.csail.mit.edu/2020/debugging-profiling/) 随练习短查。中文讲解可选 [Dr.Dng CSAPP 带学](https://www.bilibili.com/video/BV1hf4y1P7qW/)，此前只核对过目录，关键结论仍回查教材和官方资料。
 
-## 最小核心：C++、算法与系统
+## 数学：按当前问题选题
 
-| 资源 | 用法 |
+| 主资源 | 使用范围 |
 |---|---|
-| [CS106L Spring 2025](https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1256/) | 现代 C++ 主来源；选择类型/引用、类、容器、泛型、特殊成员、移动、RAII 与智能指针的讲次和原有作业；基础函数与类知识先补齐 |
-| [Programming: Principles and Practice Using C++，第 3 版](https://www.stroustrup.com/programming.html) | 补 CS106L 所需的语言缺口，按需选原题；不额外完整修读，不另学整套 GUI |
-| [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) | 资源管理、接口、类与并发的查阅材料；不是按条背诵的课程 |
-| [CS106B Spring 2025](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1256/) · [讲次索引](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1256/lecture_index) | 数据结构与基础算法主来源；第二门编程课，包含递归、容器、树/堆、哈希、图与路径算法；按该学期框架完成原题，Stanford 教学库与 STL 分别理解 |
-| [MIT 6.006 Spring 2020](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) · The Algorithm Design Manual，Steven Skiena | 6.006 是替代课程，Skiena 是问题参考；不与 CS106B 重复完整修读 |
-| [MIT 6.042J / Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/) | 随算法选逻辑、归纳、不变量、图、计数与基本概率的原有章节和习题 |
-| CSAPP 第 3 版 · [官方站点](https://csapp.cs.cmu.edu/3e/) | 第 2/3 章建立表示与机器程序基础，第 4/5 章选学执行模型与优化，再接缓存、链接、进程、虚拟内存和并发；范围见计划 |
-| [CMU 15-213 Spring 2025 课表](https://www.cs.cmu.edu/afs/cs/academic/class/15213-s25/www/schedule.html) | 按主题取讲义、代码、工具导读；视频可访问性开课时核对 |
-| [CSAPP 自学实验入口](https://csapp.cs.cmu.edu/3e/labs.html) | Cache Lab 按需选做，使用允许自学的 Self-Study Handout，遵守其公开范围 |
-| [OSTEP 作者官网](https://pages.cs.wisc.edu/~remzi/OSTEP/) | 虚拟化、并发和持久化基础；选对应作业/模拟器，文件、I/O、缓存与崩溃恢复的基本问题纳入核心 |
-| [Missing Semester：Debugging and Profiling](https://missing.csail.mit.edu/2020/debugging-profiling/) | 随当前练习短查调试、日志、分析和测量工具；不新增完整工具必修课 |
-| [IIT Bombay OS 讲授](https://www.cse.iitb.ac.in/~mythili/os/) | Part A–D 基于 OSTEP，Part X 用 xv6 **x86** 举例；不能照搬其代码到 RISC-V |
-| [MIT 6.1810 2025 课表](https://pdos.csail.mit.edu/6.1810/2025/schedule.html) · [工具](https://pdos.csail.mit.edu/6.1810/2025/tools.html) | xv6 的匹配教材、RISC-V/QEMU 与环境说明 |
-| [page tables](https://pdos.csail.mit.edu/6.1810/2025/labs/pgtbl.html) · [thread](https://pdos.csail.mit.edu/6.1810/2025/labs/thread.html) | 系统实现选做；先完成 OSTEP 习题，需要深入时选择一个。配套代码分支和测试不可混用其他年份；先读指定章节 |
-| [Compiler Explorer](https://godbolt.org/) · Inside the C++ Object Model，Stanley B. Lippman | 对象布局、虚函数的实现观察与历史机制参考，按需选读，不外推为 C++ 标准保证 |
+| [MIT 18.06 Linear Algebra，Spring 2010](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) | 向量、点积叉积、矩阵、线性方程、基、坐标变换、正交与投影，结合原有习题支撑几何、图形与数值计算 |
+| [MIT 18.01SC Single Variable Calculus，Fall 2010](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/) | 导数、积分、近似、参数曲线与弧长等按需选题 |
+| [MIT 18.02SC Multivariable Calculus，Fall 2010](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/) | 偏导数、曲面切向量与法向等按当前主题选题 |
+| [3Blue1Brown 线性代数](https://www.3blue1brown.com/topics/linear-algebra) | 辅助建立直觉，配合上述课程计算与推导；不代替习题验证 |
 
-保留先前用户提供的 [Dr.Dng CSAPP 中文带学](https://www.bilibili.com/video/BV1hf4y1P7qW/) 作为可选解释入口；此前只核对过目录，未逐集审校。本轮范围以书籍和官方资料为准，同主题不重复观看整套课程。
+数学随局部任务推进，不要求先完整修完这些课程再开始 OCCT 或 GAMES101 的入门内容。
 
-## 优先探索：OCCT
+## 当前工作：OCCT 7.9.x 与 CAM
 
-当前工作基于 OCCT，因此将其作为持续研究对象；研究深度由当前基础和实际问题决定。工作使用版本尚未确认，先在本地确认版本，再匹配源码标签与文档。下列 master 链接用于定位材料，不能直接当作工作版本的 API 依据。
+工作版本已确认为 **OCCT 7.9.x**。以下官方文档固定到 `V7_9_0`，用于该系列的基础入口；具体 API、补丁差异和源码行为以工作实际版本核对。官网旧版链接可能跳到 8.x，不将跳转后的文档或 master 当作 7.9.x 的实践依据。
 
-| 官方资料 | 使用方式 |
+| 资源 | 使用范围 |
 |---|---|
-| [文档总入口](https://dev.opencascade.org/doc/overview) | 按版本查阅概览、用户手册和 API Reference |
-| [Bottle Tutorial](https://github.com/Open-Cascade-SAS/OCCT/blob/master/dox/tutorial/tutorial.md) | 初学从 Profile 小段开始，将点/曲线、拓扑构造与 C++ 值对象/handle 联系起来 |
-| [User Guides](https://github.com/Open-Cascade-SAS/OCCT/blob/master/dox/user_guides/user_guides.md) | Foundation Classes、Modeling Data/Algorithms、Shape Healing、Mesh、Visualization、STEP/XDE 等按专题深入 |
-| [Debugging tools and hints](https://github.com/Open-Cascade-SAS/OCCT/blob/master/dox/debug/debug.md) | 源码断点、形状检查与 DRAW 调试；需要回归时再使用匹配版本的测试体系 |
+| [Quaoar 第 7 集](https://www.youtube.com/watch?v=ie7UCyg_b4Q) · [第 8 集](https://www.youtube.com/watch?v=qGPxaqyNMRE) | 全局概览辅助，结合官方文档辨认模块及关系；[第 4 集 AIS](https://www.youtube.com/watch?v=PXkv7fmURnI) 可按显示与拾取需求选看，视频不作为版本 API 依据 |
+| [Introduction，V7_9_0](https://github.com/Open-Cascade-SAS/OCCT/blob/V7_9_0/dox/introduction/introduction.md) | 先建立 Foundation、Modeling Data/Algorithms、Visualization、Data Exchange、Application Framework 的全局结构 |
+| [Modeling Data，V7_9_0](https://github.com/Open-Cascade-SAS/OCCT/blob/V7_9_0/dox/user_guides/modeling_data/modeling_data.md) | 几何与拓扑：gp、Geom、TopoDS，曲线/曲面参数，以及位置、方向、容差与 B-rep 的关系 |
+| [Bottle Tutorial，V7_9_0](https://github.com/Open-Cascade-SAS/OCCT/blob/V7_9_0/dox/tutorial/tutorial.md) | 从 Profile 到完整 Bottle，联系几何对象、Edge/Wire/Face/Solid、建模操作与结果检查 |
+| [User Guides，V7_9_0](https://github.com/Open-Cascade-SAS/OCCT/blob/V7_9_0/dox/user_guides/user_guides.md) | 按需定位 Visualization、数据交换与 OCAF 文档；入门先理解显示/选择、导入导出、文档/属性/撤销等职责 |
 
-研究顺序与成果要求见 LEARNING_PLAN：基础接口与对象语义 → B-rep 数据模型 → 算法诊断与源码 → 专题研究。示例使用独立合成模型；FreeCAD 作为上层集成对照，libigl 作为网格处理对照。
+入门后回到当前 CAM 的轮廓提取、表面提取、孔相关功能、拾取与转换，核对坐标、参数、拓扑归属及几何含义。先能使用和解释相关接口，再按真实故障进入算法诊断和源码；不要求先深入整个内核。示例采用独立合成模型，工作中的非公开代码和数据不进入公开仓库。
 
 ### CAM 工艺与五轴接口
 
-| 资源 | 选读范围与用途 |
+| 资源 | 使用范围 |
 |---|---|
-| 天津大学《机械制造技术基础》 | CAM 工艺入门首选。选看 1.3–1.4、2.2–2.4、5.2–5.5，对应工艺过程、装夹定位、工艺路线、余量与公差，使用相关章节原有习题。[课程大纲](https://www.icourse163.org/course/detail.htm?cid=1003482003) |
-| 王隆太主编《机械 CAD/CAM 技术》第 5 版 | 选读 7.3 刀位点计算和 7.4.2 刀具轨迹生成，结合例题理解设计几何、刀位与路径之间的关系。[出版社目录](https://www.cmpedu.com/books/book/5606280.htm) |
-| LinuxCNC 五轴运动学文档 | 遇到轴名、坐标系或 RTCP 问题时，选一种具体机床构型，对照图示理解工件位姿与机床轴运动的关系。实际接口定义以对应设备和系统文档为准。[五轴运动学文档](https://linuxcnc.org/docs/stable/html/motion/5-axis-kinematics.html) |
+| [天津大学《机械制造技术基础》课程大纲](https://www.icourse163.org/course/detail.htm?cid=1003482003) | 选看 1.3–1.4、2.2–2.4、5.2–5.5：工艺过程、装夹定位、工艺路线、余量与公差，配套相关原题 |
+| [《机械 CAD/CAM 技术》第 5 版目录](https://www.cmpedu.com/books/book/5606280.htm) | 选读 7.3 刀位点计算和 7.4.2 刀具轨迹生成，理解设计几何、刀位与路径的关系 |
+| [LinuxCNC 五轴运动学](https://linuxcnc.org/docs/stable/html/motion/5-axis-kinematics.html) | 遇到轴名、坐标系或 RTCP 时选一种机床构型对照；实际接口以对应设备与系统文档为准 |
 
-## 后续提升：图形学
+## 图形学：提前选学 GAMES101 原作业 0–2
 
-- [3Blue1Brown 线代](https://www.3blue1brown.com/topics/linear-algebra)：几何直觉，配合虎书原有计算练习；也可用于理解 OCCT 中的坐标与变换。
-- [GAMES101 官方课程主页](https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html)：第 2 讲线代，第 3/4 讲变换，第 5/6 讲光栅化；页面有讲义与视频入口。官方先修涉及线代、微积分、算法和数据结构，本计划按选学内容补缺，不宣称只看线代视频就满足整课前置。
-- 官方作业入口：[作业 0](https://games-cn.org/forums/topic/graphics-intro-hw0/) · [作业 1](https://games-cn.org/forums/topic/graphics-intro-hw1/) · [作业 2](https://games-cn.org/forums/topic/graphics-intro-hw2/)。[作业 0 说明](https://games-cn.org/wp-content/uploads/2023/10/pa0.pdf) 涉及 C++、Eigen、CMake 及齐次变换。已核对发布入口，未运行或完整审阅压缩包内的实现和测试。
-- Fundamentals of Computer Graphics，第 4 版（虎书）：对应数学、变换、光栅化章节及习题。先完成原作业，再按实际需要扩展；不额外重写另一套光栅器。
+- [GAMES101 官方课程主页](https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html)：第 2 讲线代、第 3/4 讲变换、第 5/6 讲光栅化，按选学内容补局部先修。
+- 官方原作业：[作业 0](https://games-cn.org/forums/topic/graphics-intro-hw0/) · [作业 1](https://games-cn.org/forums/topic/graphics-intro-hw1/) · [作业 2](https://games-cn.org/forums/topic/graphics-intro-hw2/)。[作业 0 说明](https://games-cn.org/wp-content/uploads/2023/10/pa0.pdf) 涉及 C++、Eigen、CMake 和齐次变换。此前核对过发布入口，尚未运行作业包。
+- Fundamentals of Computer Graphics，第 4 版（虎书）：对应数学、变换和光栅化章节及习题，按需查阅。
 
-- GAMES102《几何建模与处理》为几何方向进阶选修。OCCT 实践中反复遇到曲线曲面表示、逼近或网格处理问题时，选对应讲次和原有作业系统补强。[课程主页](https://games-cn.org/games102/)
+具备相应 C++、向量矩阵与变换基础即可开始这些局部作业；这不表示满足整门课的全部先修或完成整课。先做原作业，不额外重写另一套光栅器。
 
-## 后续提升：CUDA 与高性能计算
+## CUDA：提前入门与独立深入路线
 
-CUDA 可作为独立深入方向。按计划中的执行与正确性、GPU 架构与性能、并行算法与算子、系统应用四层推进；资料按层使用，不要求一次读完。硬件和工具环境在实际启动时核验，不默认支持全部新架构特性。
+单 GPU 执行与正确性 → 架构与性能 → 并行算法与算子 → 系统应用。无需先完成全部 OCCT 或图形学；具体硬件、Toolkit 与工具兼容性在启动时核验。
 
-浮点资料也适用于 CPU 几何与数值计算；单 GPU 基础先于多 GPU 和分布式。几何、渲染及 CUDA 的局部先修分别满足，不要求先完成全部图形学或 OCCT 才能学习 CUDA。
-
-| 资源 | 用法 |
+| 资源 | 使用范围 |
 |---|---|
-| [PMPP 第 5 版出版社目录](https://www.inspectioncopy.elsevier.com/book/details/9780443439001) | 2026-06-03 出版；Wen-mei W. Hwu、David B. Kirk、Izzat El Hajj。基础第 1–6 章，归约第 10 章；高级矩乘第 23 章按需，不能声称前六章覆盖归约 |
-| [CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-programming-guide/index.html) | 执行模型、内存、同步及当前 API 的官方依据；使用与实际 Toolkit 相符的文档 |
-| [CUDA Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html) | 从并行化判断、数据传输到性能优化，配合当前练习理解带宽、资源与整体开销 |
-| [Compute Sanitizer](https://docs.nvidia.com/compute-sanitizer/ComputeSanitizer/index.html) | memcheck、racecheck、initcheck、synccheck 按适用范围检查内存与同步；不替代算法和数值验证 |
-| [Nsight Systems](https://docs.nvidia.com/nsight-systems/UserGuide/index.html) | CPU/GPU 时间线、启动、等待与传输，先定位应用整体问题 |
-| [Nsight Compute Profiling Guide](https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html) | 报告、指标意义、采集方式与工具开销；先正确，再分析和优化 |
-| [CCCL](https://nvidia.github.io/cccl/) | CUB/Thrust 等并行原语；作为扫描/归约等练习的语义和性能比较对象 |
-| [cuBLAS/cuBLASLt](https://docs.nvidia.com/cuda/cublas/index.html) | 矩乘与相关线性代数库基线；匹配布局、精度和计时范围后比较 |
-| [CUTLASS 官方文档](https://docs.nvidia.com/cutlass/latest/overview.html) | 分块 GEMM 之后研究局部实现、布局、CuTe 与架构相关优化 |
-| [PyTorch 自定义 C++/CUDA 算子](https://docs.pytorch.org/tutorials/advanced/cpp_custom_ops.html) | 选择机器学习算子方向后使用；先具备张量与算子语义，分别验证注册行为和数值结果 |
-| [NVIDIA Floating Point and IEEE 754](https://docs.nvidia.com/cuda/floating-point/index.html) | 舍入、FMA、CPU/GPU 差异与编译选项的首选免费资料 |
-| [Floating Point Numerics for Games and Simulations](https://www.routledge.com/Floating-Point-Numerics-for-Games-and-Simulations/Badizadegan/p/book/9781003565543) | Nima Badizadegan，CRC Press，2025；选查数值误差与性能，不必为几小时回顾购买或通读 |
-| CUDA by Example | 轻量历史示例，API/构建以当前官方文档为准，不直接承诺旧代码可运行 |
-| Computational Geometry in C，Joseph O'Rourke | 几何处理问题按需参考，不新增计算几何整课 |
+| [PMPP 第 5 版出版社目录](https://www.inspectioncopy.elsevier.com/book/details/9780443439001) | 基础第 1–6 章，归约第 10 章；高级矩乘第 23 章后续按需，不把归约写成前六章内容 |
+| [CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-programming-guide/index.html) · [Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html) | 执行映射、内存、同步、传输和优化的官方依据；使用与实际 Toolkit 相符的文档 |
+| [Compute Sanitizer](https://docs.nvidia.com/compute-sanitizer/ComputeSanitizer/index.html) | 按适用范围使用 memcheck、racecheck、initcheck、synccheck，并独立验证算法与数值结果 |
+| [Nsight Systems](https://docs.nvidia.com/nsight-systems/UserGuide/index.html) · [Nsight Compute](https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html) | 先定位应用时间线、启动/等待/传输，再分析 kernel 指标及资源开销 |
+| [NVIDIA 浮点与 IEEE 754](https://docs.nvidia.com/cuda/floating-point/index.html) | 舍入、FMA、CPU/GPU 差异与编译选项；同样辅助 CPU 几何数值判断 |
+| [CCCL](https://nvidia.github.io/cccl/) | 后续扫描、归约等并行原语与性能比较 |
+| [cuBLAS/cuBLASLt](https://docs.nvidia.com/cuda/cublas/index.html) | 矩乘和线性代数库基线，比较前匹配布局、精度与计时范围 |
+| [CUTLASS](https://docs.nvidia.com/cutlass/latest/overview.html) | 分块 GEMM 之后研究布局、数据复用、CuTe 与架构相关优化 |
+| [PyTorch 自定义 C++/CUDA 算子](https://docs.pytorch.org/tutorials/advanced/cpp_custom_ops.html) | 选择算子方向后使用，先理解张量语义，分别验证注册与数值结果 |
 
-PMPP 相关 Applied Parallel Programming / Heterogeneous Parallel Programming 视频可按同一主题辅助，具体授课年份、播放列表和作业版次在开课时匹配。GPU MODE / GPU Puzzles 是可选练习来源，本轮未逐项核验。
+## 开源与岗位：辅助观察应用
 
-### 进一步认识领域：暂不确定为职业目标
+开源入口按当前问题选读，不按星数排序，也不计入已完成的学习进度：
 
-- 几何、渲染、仿真可视化：按所选问题继续使用 OCCT、libigl、GAMES101/虎书、Filament；需要时补微积分、微分方程和数值方法。
-- 金融量化系统：[QuantLib](https://www.quantlib.org/) 用于认识 C++ 数值建模、定价与风险计算这一类软件；它不是完整行情、回测和交易系统。先了解职责与小例子，再决定是否增加金融、统计或网络系统课程。
-- 模型量化与推理：[TensorRT 量化文档](https://docs.nvidia.com/deeplearning/tensorrt/latest/inference-library/work-with-quantized-types.html) 用于认识低精度类型、缩放与量化工作流，后续再连接算子和推理优化。
+| 项目 | 局部用途 |
+|---|---|
+| [FreeCAD](https://github.com/FreeCAD/FreeCAD) · [Part Box 示例](https://github.com/FreeCAD/FreeCAD/blob/main/src/Mod/Part/App/FeaturePartBox.cpp) | 观察属性、重算、OCCT 建模和结果更新的上层集成；该项目的当前分支示例不代替工作版本 API 文档 |
+| [CUDA Samples](https://github.com/NVIDIA/cuda-samples) | 按当前 Toolkit 选例子，核对索引、边界输入、数据移动和 CPU 参考结果 |
+| [CUTLASS 示例](https://github.com/NVIDIA/cutlass/tree/main/examples) | CUDA 算子性能阶段再选用，理解布局并对照参考结果 |
 
-用户尚未确定“量化系统研发”所指领域，上述两项仅作区分与探索入口，不把其中任一项写成已选职业路线。GPU 是否适用须按具体计算与整体开销判断。
+2026-11-09 的历史岗位样本仅辅助理解工作要求，未在本轮重新核验是否仍开放，不用于推断市场规模或新增课程：
 
-## GitHub 项目与知识入口
-
-2026-11-09 通过 GitHub REST API 核对以下星数，六个仓库均未归档。星数仅作关注度快照；优先级由与当前工作及所选问题的关系决定，不据此推断岗位数量。以下是建议的局部学习入口，未执行或计入学习进度。
-
-| 项目与星数 | 对应知识与用途 | 最小入口 |
-|---|---|---|
-| [FreeCAD](https://github.com/FreeCAD/FreeCAD) · 35,274 | 参数化 CAD 产品；连接文档/属性、几何内核、界面与重算机制 | [FeaturePartBox.cpp](https://github.com/FreeCAD/FreeCAD/blob/main/src/Mod/Part/App/FeaturePartBox.cpp)：追踪尺寸属性→重算→OCCT 建模→结果更新，无需先编译整个工程 |
-| [OCCT](https://github.com/Open-Cascade-SAS/OCCT) · 3,144 | CAD/CAM/CAE 几何平台；几何与拓扑、精度、数据交换及可视化 | [Bottle Tutorial](https://github.com/Open-Cascade-SAS/OCCT/blob/master/dox/tutorial/tutorial.md) 的 Profile 部分：点/曲线→Edge/Wire，观察构造状态和失败处理 |
-| [libigl](https://github.com/libigl/libigl) · 5,121 | 三角网格与几何处理；线代、稀疏矩阵、离散算子 | 先看[网格表示与法线教程](https://libigl.github.io/tutorial/)；具备稀疏线性系统基础后再看 [205_Laplacian](https://github.com/libigl/libigl/blob/main/tutorial/205_Laplacian/main.cpp)，分析算子和误差 |
-| [Filament](https://github.com/google/filament) · 20,714 | 实时渲染；顶点数据、材质、相机、渲染流程与资源生命周期 | [hellotriangle.cpp](https://github.com/google/filament/blob/main/samples/hellotriangle.cpp)：修改顶点/颜色，解释 buffer→renderable→scene/view/camera 的关系及释放顺序 |
-| [CUDA Samples](https://github.com/NVIDIA/cuda-samples) · 9,748 | 可选的 GPU 通用计算实践；执行映射、数据移动、同步 | [vectorAdd.cu](https://github.com/NVIDIA/cuda-samples/blob/master/cpp/0_Introduction/vectorAdd/vectorAdd.cu)：核对索引、非整块输入和 CPU 参考；本次所读版本使用 Unified Memory，不能当作显式拷贝示例 |
-| [CUTLASS](https://github.com/NVIDIA/cutlass) · 10,713 | 后续专门的高性能矩乘/张量计算；布局、分块与数据复用 | 仅在已学 CUDA 且选定算子性能方向后看 [basic_gemm.cu](https://github.com/NVIDIA/cutlass/blob/main/examples/00_basic_gemm/basic_gemm.cu)，解释矩阵布局并对照参考结果 |
-
-OCCT 是当前工作的优先研究对象，FreeCAD 提供产品集成对照，libigl/Filament 提供几何与渲染探索入口；CUDA Samples 到 CUTLASS 对应 CUDA 分支从入门到算子性能的不同层次。以上是本计划的使用建议，不是项目作者规定的学习路线。
-
-## 招聘岗位：辅助观察知识如何用于工作
-
-调研日期：2026-11-09。只考虑江苏、浙江、上海、北京、广州、合肥；来源限定 BOSS直聘、前程无忧、猎聘和公司官网。下表不是求职清单或市场统计，也不要求覆盖每个地区。岗位负责说明能力在不同工作中的用途，课程范围与先修关系由学习计划决定。
-
-| 样本与来源 | 地点与资历 | 可核对的能力要求及用途 | 证据边界 |
-|---|---|---|---|
-| 浩辰 [C++中高级软件工程师](https://www.gstarcad.com/joinus/) | 北京；本科，3年以上，至少2年 C++ 经验 | 需求分析、方案设计与评审、关键模块实现、代码审核；说明工业软件研发需要语言与工程能力共同支撑 | 官网正文可读；该岗位另列的非目标城市不纳入；未见明确发布日期 |
-| 柏楚 [27校招-几何算法工程师 J10838](https://fscut.zhiye.com/campus/jobs) | 上海；校招，理工科本科及以上 | 数据结构与算法、面向对象语言、计算几何/数值计算；偏置、求交、裁剪、布尔等用于刀路和工艺计算 | 官方招聘页搜索索引文本；直接打开无可读正文；索引列发布日期 2026-09-02 |
-| Cadence [Lead Software Engineer (Graphics), R56789](https://cadence.wd1.myworkdayjobs.com/en-US/External_Careers/job/Lead-Software-Engineer--Graphics-_R56789-1) | 上海；10年以上 | 工程软件模型显示、选择与交互、渲染及可视化；C++、内存/线程/图形性能诊断 | 官方招聘页索引文本；资深职责只作深入方向参照，不作为当前学习门槛 |
-| NVIDIA [Graphics Tools Software Engineer, JR2017973](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Graphics-Tools-Software-Engineer_JR2017973) | 上海；相关学位及3年以上经验为优先 | C++、图形 API、Linux 进程线程/IPC/内存/系统调用、调试与性能诊断；连接图形工具与底层系统知识 | 官方招聘页索引文本；直接打开无可读正文；GPU 架构与调优属加分项 |
-| 数码大方 [三维CAD算法工程师（应届生方向）](https://www.zhipin.com/job_detail/eb2819810b4bfd5f03F_2NW4FFBT.html) · BOSS直聘 | 北京海淀；在校/应届，硕士 | 布尔运算、曲面构造、拓扑维护、特征识别与编辑，提示几何算法方向需要进一步的数学与几何知识 | 仅取得 [BOSS列表摘要](https://www.zhipin.com/zhaopin/fca1b10be8156cb10HB52tg~/)；详情页受安全验证限制，不补写缺失任职条件 |
-
-上述页面或索引的存在不表示岗位现时仍开放；不同资历样本仅用于区分知识应用的深度。前程无忧、猎聘也已检索，但未取得满足本轮地区范围且足以支持能力分析的具体岗位正文，因此未纳入主表；未绕过登录或验证码。
-
-结合样本的辅助判断：C++、算法、工程实现可直接联系 CAM/CAD；几何岗位更关注表示、拓扑与鲁棒性，图形工具岗位更强调操作系统、内存、并发与诊断。CUDA/HPC、量化相关系统及仿真方向的深入安排主要基于知识关系与用户兴趣，本轮岗位样本不足以判断这些方向在目标地区的具体需求。
-
-### 岗位要求如何落实到当前学习
-
-浩辰在苏州列出的 C++ 岗位包含详细设计、实现、编译调试和单元测试，北京中高级岗位还涉及需求分析、方案评审和关键模块开发。这组职责适合用来选择练习深度。对一个轮廓偏置功能，先约定结果应保留哪侧材料，再实现并测试，最后说明适用条件和失败时如何处理。[浩辰招聘官网](https://www.gstarcad.com/joinus/)
-
-上海几何算法岗位的历史样本涉及求交、裁剪和布尔运算。结合当前实际使用的内核，学习时可从中选一类，在 OCCT 中跟踪形状构造与结果检查，再用 FreeCAD 的 Part 示例观察上层参数如何驱动重算。OCCT 是根据当前工作选择的实现，岗位样本用于校准问题难度。[OCCT 建模算法手册](https://dev.opencascade.org/doc/overview/html/occt_user_guides__modeling_algos.html) · [FreeCAD Part 示例](https://github.com/FreeCAD/FreeCAD/blob/main/src/Mod/Part/App/FeaturePartBox.cpp)
+- [浩辰招聘官网](https://www.gstarcad.com/joinus/)：历史 C++ 岗位涉及需求、设计、实现、调试与测试，可用于校准工程练习深度。
+- [柏楚校招入口](https://fscut.zhiye.com/campus/jobs)：当时几何算法岗位索引涉及数据结构、几何/数值计算、偏置、求交与布尔；直接页面未取得可读正文，保留此证据边界。
+- [NVIDIA Graphics Tools，JR2017973](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Graphics-Tools-Software-Engineer_JR2017973)：当时官方索引涉及 C++、图形 API、Linux 系统知识及调试性能诊断；直接页面未取得可读正文。
 
 ## 资料与成果管理
 
-课程资料和成果统一放在本仓库的 `courses/<course>/`，总进度见 [STATUS](STATUS.md)；CS50x 目录待实际启动时创建。独立项目或需隔离的受限作业才另设仓库。
+课程成果统一放在 `courses/<course>/`，实际开课后才创建目录并在总 STATUS 登记。默认通过本仓库同步文档接续；独立项目或需隔离的受限作业才另设仓库。
 
-课程资料可阅读不等于可公开复制或公布答案。使用实验时按当前课程规则处理框架、测试和解答；公开仓库只保存允许公开的内容，不复制公司代码或客户数据。综合实践采用独立实现和合成数据。
+可阅读不等于可公开复制或公布答案。按课程规则处理框架、测试、实验包与解答；公开仓库只保存允许公开的内容，不复制公司代码或客户数据。综合实践采用独立实现和合成数据。

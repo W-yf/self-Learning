@@ -1,50 +1,55 @@
 # 当前状态
 
-本文件维护当前计划的总进度、课程索引和接续入口。详细范围见 [学习计划](LEARNING_PLAN.md)，资料见 [RESOURCES](RESOURCES.md)。
+本文件维护总进度、课程索引和接续入口。详细范围见 [学习计划](LEARNING_PLAN.md)，资料入口见 [RESOURCES](RESOURCES.md)。
 
 ```yaml
-last_updated: 2026-11-13
+last_updated: 2026-11-16
 current_day: 1
 completed_learning_days: 0
 progress_scope: current_learning_plan
 current_stage: core_programming_foundations
 current_stage_status: planned_not_started
-plan_revision: minimal_cs_core_and_cam_exploration
+plan_revision: minimal_cs_core_cam_occt79_early_graphics_cuda
 plan_review_status: approved
-plan_approved_at: 2026-11-13
+plan_approved_at: 2026-11-16
 repository_role: learning_overview
 course_repository_strategy: single_repository_course_directories
 weekly_hours_stage_1: 7
 weekly_hours_stage_2: 9-11
 weekly_hours_stage_2_confirmed: 2026-11-09
-weekly_hours_stage_3_proposed: 6-8
-next_task: fill_c_gaps_with_cs50x_exercises_and_create_course_directory
+occt_work_version: 7.9.x
+next_task: start_cs50x_c_gap_exercises_and_occt79_overview
 sync_verification: compare_HEAD_origin_main_and_remote_main
 repository_url: https://github.com/W-yf/self-Learning
-remote_pulled_at: 2026-11-13
+remote_fetched_at: 2026-11-16
 ```
 
 ## 当前安排
 
-**以计算机基础知识构成最小、连贯的共同核心。** C++ 为主要实践语言。当前职业最高优先级是以 OCCT 做深 CAD/CAM 研发，结合工艺需求、接口和边界样例，积累独立设计与验证的能力，并向 CAD、CAM、CAE 相邻岗位迁移。完成当前 OCCT/CAD/CAM 阶段目标后，再选择图形学或 CUDA 系统提升。职业排序与技术栈已于 2026-11-13 审核通过，阶段完成的判断示例见[学习计划](LEARNING_PLAN.md)。
+**以计算机基础知识构成最小、连贯的共同核心。** C++ 为主要实践语言，按程序、数据结构、机器执行、内存和操作系统推进。
 
-新计划尚未开课。学习日从本计划第 1 天起计算，已完成 0 天；这表示当前计划的进度，不否认过去的学习经历。当前掌握情况由后续课程习题和实验确认。
+当前 CAM 工作以 OCCT 7.9.x 为基础，先补整体概念，再结合轮廓、表面、孔、拾取和转换等任务研究几何与拓扑、空间数学和接口语义。目标是准确理解需求与约束，理解并独立修改代码，验证结果、定位错误并在需要时分析性能。图形学和 CUDA/HPC 满足局部先修后提前探索，后续按实践体验选择一项深入。
+
+本版方案已于 **2026-11-16 审核通过并定稿**，范围与时间以 LEARNING_PLAN 为准：起步 7 小时/周（核心 5、工作基础及相关数学 2），后续 9–11 小时/周（核心与所需数学 6–7、工作基础与探索 3–4）。本轮预计 520–805 小时、18–30 个月，后续方向深化另行估时。
+
+当前计划尚未开课，已完成学习日为 0。此次调整仅更新计划和资料，不推进学习日或掌握层级。实际掌握情况由课程习题和实验确认。
 
 ## 课程目录索引
 
-当前尚无已启动课程。实际开课时创建 `courses/<course>/`，在此登记课程版本、README、成果入口和下一步；独立项目或受限作业才另设仓库。
+当前尚无已启动课程。实际开课时创建 `courses/<course>/`，在此登记范围、课程版本、README、成果链接和下一步。课程内保存笔记、练习与验证证据。
 
 ## 下一学习会话
 
-1. 检查本地分支和修改、同步远程，再读本 STATUS 与已确认计划。
-2. 从 CS50x 2026 的 C 相关原题按缺口接续，实际启动时创建 `courses/cs50x/` 并登记课程版本、题目与成果入口；Week 0 作背景，优先 Week 1–5，能独立完成的内容加快通过。
-3. 起步每周约 7 小时，其中核心 5–6 小时、方向探索 1–2 小时。完成首个课程单元后用实际耗时校准安排。需要探索时，先确认工作所用 OCCT 版本，可用纯平移样例区分轨迹点与方向，或用一条五轴轨迹核对参考点、坐标系和补偿分工。核心深化阶段的探索计入每周已有的 2–3 小时预算。
-4. 只配置当前作业必要工具。CSAPP/xv6/CUDA 环境留到对应阶段验证。
+1. 检查本地修改、分支与上游，保留未同步内容；快进同步本仓库后，读取本 STATUS、适用规则和当前计划。
+2. 核心时段从 CS50x 2026 Week 1–5 的 C 相关原题按缺口接续。能独立完成并解释的部分加快通过，遇到概念缺口再补讲解。实际开课时创建 `courses/cs50x/` 并登记题目、成果与接续任务。
+3. 方向时段启动 OCCT 通识：Quaoar 第 7、8 讲结合 7.9 官方 Introduction，认识模块与几何/拓扑的关系，再进入对应版本 Bottle。实际开课时创建 `courses/occt/`，登记工作项目实际 7.9 补丁版本和学习环境；资料使用匹配版本，不复制工作项目代码或数据。
+4. 按每周核心 5 小时、工作基础与相关数学 2 小时执行。完成前几个单元后，用练习与调试的实际耗时校准安排；图形学与 CUDA 在满足各自启动条件后，使用方向时段分阶段开始。
+5. 只配置当前练习必要工具。小节结束整理课程笔记，更新课程 README 与本 STATUS 的成果入口、简短摘要和下一步。
 
 ## 同步与跨电脑接续
 
-首次克隆、学前同步、学后提交核验和两类新对话接手提示词，统一见 [README：两台电脑同步与接续学习](README.md#两台电脑同步与接续学习)。当前课程与下一步以本 STATUS 为准。
+操作步骤与新对话接手提示词见 [README：两台电脑同步与接续学习](README.md#两台电脑同步与接续学习)。课程安排以本 STATUS 为入口，实际成果以课程文件为依据。
 
-2026-11-10 按用户要求清理旧学习记录及对应入口；历史记录仍可通过 Git 查阅。跨电脑接续时，以本地 HEAD、origin/main 和远程 main 是否一致核对同步结果。
+2026-11-16 更新前已获取远程引用，核对本地 main 与 origin/main 一致。每次提交和推送后仍需按 README 核对 HEAD、origin/main 与远程 main；发布结果以 Git 为准，不把审核通过等同于已推送。
 
-既有未跟踪 `CppProperties.json` 未改动。若文件长度元数据异常造成假截断，应核对完整字节流与 Git 对象，不据异常 diff 覆盖文件。
+既有未跟踪 `CppProperties.json` 为本地文件，本次保留且不纳入提交。换电脑后按实际 Git 状态检查未同步事项。
